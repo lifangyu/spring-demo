@@ -11,7 +11,11 @@
   <url>http://maven.apache.org</url>
 
 	<modules>
-    <module>spring-parent</module>
-  </modules>
+	    <module>spring-parent</module>
+	    <module>spring-web</module>
+	    <module>spring-core</module>
+	    <module>spring-api</module>
+	    <module>spring-service</module>
+	</modules>
   
 </project>
