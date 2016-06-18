@@ -16,7 +16,7 @@
   <modules>
     <module>spring-parent</module>
     <module>spring-web</module>
-    <module>spring-core</module>
+    <module>spring-common</module>
     <module>spring-api</module>
     <module>spring-service</module>
   </modules>
