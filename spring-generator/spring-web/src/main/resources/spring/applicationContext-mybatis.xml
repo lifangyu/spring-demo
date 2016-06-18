@@ -26,52 +26,44 @@
  		<property name="password" value="${datasource.password}"/>
  	</bean>
 	
-	<!--Hibernate 相关的配置 -->
-	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<!-- <property name="entityInterceptor" ref="entityInterceptor"></property> -->
-		<property name="packagesToScan">
-			<list>
-				<value>com.spring.demo.entity</value>
-			</list>
-		</property>
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
-				<prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
-				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
-				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
-				<prop key="hibernate.use_sql_comments">${hibernate.use_sql_comments}</prop>
-				<prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
-				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
-				</props>
-		</property>
-	</bean>
-	 
-	<!-- MyBatis start -->
-	<bean id="mybatisSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<!-- - - - - - - - sessionFactory - - - - - - - -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
 		<property name="typeAliasesPackage" value="com.spring.demo.modle" />
 		<!-- 显式指定Mapper文件位置 -->
-		<property name="mapperLocations" value="classpath*:/mybatis-mappers/*Mapper.xml" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:/mybatis-mappers/*Mapper.xml</value>
+			</list>
+		</property>
+		
+		<!-- <property name="plugins">
+			<array>
+				<ref bean="paginationInterceptor" />
+			</array>
+		</property> -->
+		<property name="configurationProperties">
+			<props>
+				<prop key="dialect">mysql</prop>
+			</props>
+		</property>
 	</bean>
-
-	<!-- 使用annotation定义事务 -->
-	<tx:annotation-driven transaction-manager="transactionManager" />
-
-	<!--  hibernate 事务管理器 -->
-	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory" />
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
-
 	<!-- 扫描basePackage下的接口 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.sping.demo.dao" />
 	</bean>
 	<!-- MyBatis end -->
-
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- 使用annotation定义事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
+	
 	<aop:config>  
         <aop:advisor pointcut="execution(* com.spring.demo..service.*Service.*(..))" advice-ref="txAdvice"/>  
     </aop:config>

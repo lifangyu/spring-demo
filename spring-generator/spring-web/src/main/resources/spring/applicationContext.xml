@@ -25,8 +25,9 @@
 	<!-- properties 属性配置加载 -->
 	<context:property-placeholder location="classpath:*.properties" />
 
-	<!-- DB 配置管理 -->
-	<import resource="classpath:spring/applicationContext-datasource.xml" />
+	<!-- DB数据配置管理
+	<import resource="classpath:spring/applicationContext-datasource.xml" /> -->
+	<import resource="classpath:spring/applicationContext-mybatis.xml" />
 
 	<!-- shiro 权限配置 
 	<import resource="classpath:applicationContext-shiro.xml"/>
