@@ -4,7 +4,7 @@
   <parent>
   	<groupId>com.spring.demo</groupId>
     <artifactId>spring-parent</artifactId>
-  	<version>1.0</version>
+  	<version>${spring-demo.version}</version>
   	<relativePath>../spring-parent/pom.xml</relativePath>
   </parent>
    
@@ -299,8 +299,8 @@
 		<!-- 私有jar 引入 -->
 		<dependency>
 			<groupId>com.spring.demo</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring-demo.version}</version>
+			<artifactId>spring-comm</artifactId>
+			<version>1.0</version>
 		</dependency>
 		
 	</dependencies>

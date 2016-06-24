@@ -15,10 +15,11 @@
   </properties>
   <modules>
     <module>spring-parent</module>
-    <module>spring-web</module>
-    <module>spring-common</module>
+    <module>spring-comm</module>
     <module>spring-api</module>
     <module>spring-service</module>
+    <module>spring-web</module>
+    <module>auth-manage</module>
   </modules>
   
 </project>

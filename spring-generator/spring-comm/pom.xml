@@ -2,12 +2,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.spring.demo</groupId>
-    <artifactId>spring-parent</artifactId>
-    <version>1.0</version>
+    <artifactId>spring-generator</artifactId>
+    <version>${spring-demo.version}</version>
   </parent>
-  
-  <!-- <groupId>com.spring.demo</groupId> -->
-  <artifactId>spring-common</artifactId>
-  <version>${spring.version}</version>
-  <name>spring-common</name>
+  <artifactId>spring-comm</artifactId>
+  <version>${spring-demo.version}</version>
+  <name>spring-comm</name>
 </project>
