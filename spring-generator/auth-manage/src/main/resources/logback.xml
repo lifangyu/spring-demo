@@ -12,9 +12,9 @@
 	</appender>
 	
 	<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>logs/spring-demo.log</file>
+		<file>C:\\logs\\auth.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>logs/spring-demo.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<fileNamePattern>logs/auth.log.%d{yyyy-MM-dd}.log</fileNamePattern>
 		</rollingPolicy>
 		<encoder charset="UTF-8">
 			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
@@ -22,9 +22,9 @@
 	</appender>
 	
 	<appender name="aopLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>logs/spring-demo_aop_log.log</file>
+		<file>C:\\logs\\auth_aop_log.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>logs/spring-demo_aop_log.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<fileNamePattern>logs/auth_aop_log.%d{yyyy-MM-dd}.log</fileNamePattern>
 			<maxHistory>30</maxHistory>
 		</rollingPolicy>
 		<encoder charset="UTF-8">
@@ -33,7 +33,7 @@
 	</appender>
 
 	<!-- project default level -->
-	<logger name="com.spring.demo" level="INFO" />
+	<logger name="com.auth" level="INFO" />
 
 	<!-- root -->
 	<root level="WARN">
@@ -43,6 +43,7 @@
 
 	<!-- 下面配置一些第三方包的日志过滤级别，用于避免刷屏 -->
 	<logger name="org.hibernate" level="INFO" />
+	<logger name="org.mybatis" level="INFO" />
 	<logger name="org.springframework" level="INFO" />
 	<logger name="com.opensymphony" level="WARN" />
 	<logger name="org.apache" level="INFO" />

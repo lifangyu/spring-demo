@@ -18,7 +18,7 @@
        http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
        
 	<!-- 数据源
-	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/spring-demo" /> -->
+	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/auth_jdbc" /> -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
  		<property name="driverClass" value="${datasource.driverClass}"/> 
  		<property name="jdbcUrl" value="${datasource.jdbcUrl}"/>
@@ -29,9 +29,9 @@
 	<!-- - - - - - - - sessionFactory - - - - - - - -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
-		<property name="configLocation" value="classpath:mybatis-config.xml"/>
-		<property name="typeAliasesPackage" value="com.spring.demo.model" />
+		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置
+		<property name="configLocation" value="classpath:mybatis-config.xml"/>  -->
+		<property name="typeAliasesPackage" value="com.auth.model" />
 		<!-- 显式指定Mapper文件位置 -->
 		<property name="mapperLocations">
 			<list>
@@ -55,7 +55,7 @@
 	</bean>
 	<!-- 扫描basePackage下的接口 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.sping.demo.dao" />
+		<property name="basePackage" value="com.auth.dao" />
 	</bean>
 	<!-- MyBatis end -->
 	
@@ -66,7 +66,7 @@
 	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
 	
 	<aop:config>  
-        <aop:advisor pointcut="execution(* com.spring.demo..service.*Service.*(..))" advice-ref="txAdvice"/>  
+        <aop:advisor pointcut="execution(* com.auth..service.*Service.*(..))" advice-ref="txAdvice"/>  
     </aop:config>
     
      <tx:advice id="txAdvice" transaction-manager="transactionManager">  

@@ -33,7 +33,7 @@
 		<!-- <property name="entityInterceptor" ref="entityInterceptor"></property> -->
 		<property name="packagesToScan">
 			<list>
-				<value>com.spring.demo.entity</value>
+				<value>com.auth.entity</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -53,9 +53,9 @@
 	<bean id="mybatisSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
-		<property name="typeAliasesPackage" value="com.spring.demo.model" />
+		<property name="typeAliasesPackage" value="com.auth.model" />
 		<!-- 显式指定Mapper文件位置 -->
-		<property name="mapperLocations" value="classpath*:/mybatis-mappers/*Mapper.xml" />
+		<property name="mapperLocations" value="classpath*:/mybatis_mappers/*Mapper.xml" />
 	</bean>
 
 	<!-- 使用annotation定义事务 -->
@@ -68,12 +68,12 @@
 
 	<!-- 扫描basePackage下的接口 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.sping.demo.dao" />
+		<property name="basePackage" value="com.auth.dao" />
 	</bean>
 	<!-- MyBatis end -->
 
 	<aop:config>  
-        <aop:advisor pointcut="execution(* com.spring.demo..service.*Service.*(..))" advice-ref="txAdvice"/>  
+        <aop:advisor pointcut="execution(* com.auth..service.*Service.*(..))" advice-ref="txAdvice"/>  
     </aop:config>
     
      <tx:advice id="txAdvice" transaction-manager="transactionManager">  
