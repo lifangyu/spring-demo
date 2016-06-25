@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.spring.demo</groupId>
     <artifactId>spring-parent</artifactId>
-    <version>${spring-demo.version}</version>
+    <version>1.0</version>
     <relativePath>../spring-parent/pom.xml</relativePath>
   </parent>
   <groupId>com.spring.demo</groupId>

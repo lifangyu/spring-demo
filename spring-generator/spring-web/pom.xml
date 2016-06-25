@@ -4,12 +4,11 @@
   <parent>
   	<groupId>com.spring.demo</groupId>
     <artifactId>spring-parent</artifactId>
-  	<version>${spring-demo.version}</version>
+  	<version>1.0</version>
   	<relativePath>../spring-parent/pom.xml</relativePath>
   </parent>
-   
+  <groupId>com.spring.demo</groupId>
   <artifactId>spring-web</artifactId>
-  <version>${spring-demo.version}</version>
   <packaging>war</packaging>
   <name>spring-web</name>
   <url>http://maven.apache.org</url>
@@ -24,14 +23,14 @@
 	
 	<dependencies>
 
-		<dependency>
+		<!-- <dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-tomcat</artifactId>
 		</dependency>
 		<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+		</dependency> -->
 		
 		<!-- spring mvc start -->
 		<dependency>

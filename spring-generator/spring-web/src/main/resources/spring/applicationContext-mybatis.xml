@@ -35,7 +35,7 @@
 		<!-- 显式指定Mapper文件位置 -->
 		<property name="mapperLocations">
 			<list>
-				<value>classpath:/mybatis-mappers/*Mapper.xml</value>
+				<value>classpath:mybatis_mappers/*Mapper.xml</value>
 			</list>
 		</property>
 		

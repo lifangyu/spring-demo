@@ -14,9 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.spring.common.utils.image.ImageUtils;
 
+/**
+ * 
+ * 登录 Controller
+ * @author lifangyu
+ * @version V1.0
+ */
 @Controller
 public class LoginController {
-	
 	
 	/**
 	 * 生成验证码图片
@@ -28,13 +33,19 @@ public class LoginController {
 		Map<String, BufferedImage> map = ImageUtils.createImage();
 		//取得验证码，存入session
 		String code = map.keySet().iterator().next();
-		session.setAttribute("imageCode", code);
+        session.setAttribute("imageCode", code);
 		//取得图片，发送到页面
 		BufferedImage image = map.get(code);
 		response.setContentType("image/jpeg");
-		OutputStream os = response.getOutputStream();
-		ImageIO.write(image, "jpeg", os);
-		os.close();
+		OutputStream os = null;
+		try{
+		    os = response.getOutputStream();
+		    ImageIO.write(image, "jpeg", os);
+		} catch(IOException ie){
+		    throw ie;
+		}finally {
+		    os.close();
+        }
 	}
 
 }
