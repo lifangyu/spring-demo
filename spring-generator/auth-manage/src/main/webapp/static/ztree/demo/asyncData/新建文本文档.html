@@ -1,0 +1,739 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="360doc" name="classification" />
+    
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="http://www.360doc.cn/article/9861_254731914.html"/>
+    <meta content="ntfs,文件夹,选项" name=keywords>
+    <meta content="Asp连接access数据库时，报未知错误及错误码-2147467259的解决方案" name=description>
+    <meta name="mobile-agent" content="format=html5;url=http://www.360doc.cn/article/9861_254731914.html"/>
+
+    <meta content="www.360doc.com" name="author" />
+
+    <title>
+        Asp连接access数据库时，报未知错误及错误码-2147467259的解决方案
+    </title>
+    <link href="http://bdimg.share.baidu.com/static/css/bdsstyle.css?cdnversion=20130704" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://www.360doc.com/js/jquery1.js?t=2015041801"></script>
+    <script type="text/javascript" src="http://www.360doc.com/js/jQuery.md5.js?t=2013121101"></script>
+    
+    <script type="text/javascript" language="javascript">
+        window.onerror = ignoreError;
+        function ignoreError() {
+            return true;
+        }
+    </script>
+
+  <link href="http://css.360doc.com/wzhead-cleaned.css?t=2014082004" rel="stylesheet" type="text/css" />
+    <link href="http://css.360doc.com/wz20130912-cleaned.css?t=20150916082" rel="stylesheet" type="text/css" />
+
+
+    
+
+    <script type="text/javascript" src="/js/indexhead.js?t=2014082801"></script>
+    <script type="text/javascript" src="/js/showarticlefollow20130912.js?t=20150916082"></script>
+</head>
+<body>
+
+
+    <span id="LayerLogin" ></span>
+    <div style="position: fixed; width: 100%; z-index: 1000;">
+        <div class="mainnav">
+            <div class="mainnav1">
+                <div class="lf360" style="padding-left: 5px;">
+                  <a href="http://www.360doc.com/index.html"><img src="http://pubimage.360doc.com/newsite/logoo.gif" /></a>
+                </div>
+                <div style="width: 625px; padding-top: 0px; padding-left: 4px; position: absolute;">
+                    <table height="34" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr id="daohangtr">
+                                <td style="width: 185px; _width: 0px; *width: 0px !important;"></td>
+                                <td class="navwz1" width="95">
+                                    <a href="http://www.360doc.com/index.html">首&nbsp;页</a>
+                                </td>
+                                <td width="100" class="  navwz1">
+                                    <a href="http://www.360doc.com/readroom.html">阅览室</a>
+                                </td>
+                                <td width="88" class="  navwz1">
+                                    <a href="http://www.360doc.com/weekstar.html">馆友</a>
+                                </td>
+                                <td width="132" class="  navwz1">
+                                    <a href="http://www.360doc.com/my360doc.aspx">我的图书馆</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="rt360" style="padding-top: 6px; width: 133px; padding-left: 38px;" id="outerdiv">
+                </div>
+                <div class=" rt360" style="padding-top: 6px; padding-right: 0px;">
+                    <div class="lf360 serch">
+                        <input name="input2" class="serchpt" id="txtSearchword" onkeydown="ongosearch()"
+                            onkeyup="showIntelliSense()" onfocus="if(this.value=='搜文章 找馆友') this.value='';this.style.color='#272727'"
+                            onblur="if(!this.value) {this.value='搜文章 找馆友';this.style.color='#b2b2b2';}" onpaste="showIntelliSense1()"
+                            type="text" value="搜文章 找馆友">
+                    </div>
+                    <div class="lf360 ssuo">
+                        <a id="searchlinkid" href="javascript:gosearch();"></a>
+                    </div>
+                    <div id="divsearch" style="margin-top: 25px; margin-left: 1px; display: block; position: absolute; z-index: 100;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navxt">
+        </div>
+    </div>
+    <div style="height: 44px; _height: 0px; width: 100%;"></div>
+
+    <div class="both">
+    </div>
+    <div id="docTotalInfo" class="mainzt">
+        <table class="index_main" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td align="left" valign="top" width="727px">
+                        <div id='ADAboveArtContent'>
+                        </div>
+                        <div style="height: 7px;">
+                        </div>
+                        <table border="0" cellpadding="0" cellspacing="0" class="mainbj" id="docArtClass">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <table style="width: 100%; text-align: left;" border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="biaoti">
+                                                                        <div class="biaoti2 lf360">
+                                                                            Asp连接access数据库时，报未知错误及错误码-2147467259的解决方案
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="height: 32px;">
+
+
+                                                                        <div style="width: 670px; height: 28px; padding-left: 26px; color: #777b7a;">
+                                                                            <table>
+                                                                                <tr>
+                                                                                    <td>收藏人：<span class="name" onclick="wzhitnew(1);"><A href="http://www.360doc.com/userhome/9861" target="_blank">jojo1981</A></span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="btzctsg" id="spanfollowstatus">
+                                                                                        </div>
+                                                                                        <script>isfollow(9861);</script>
+
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="ytdh1"><a onclick="doctalk();wzhitnew(106);" href="javascript:void(0)"></a></div>
+
+                                                                                    </td>
+
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+
+
+
+
+                                                                        <div class="wztopxx">
+                                                                            <div style="float: left; height: 28px; padding-top: 7px;">
+                                                                                <table cellpadding="0" cellspacing="0" style="position: relative; z-index: 4">
+                                                                                    <tbody>
+                                                                                        <tr>
+
+                                                                                            <td>
+                                                                                                2012-12-18&nbsp;|&nbsp;阅：<span id="360doc_Readnum"></span>&nbsp;&nbsp;<span
+                                                                                                    style="position: relative;">转：<span onclick="wzhitnew(3)" id="360doc_saverNum"></span><span
+                                                                                                        id="360doc_saverUser"></span></span>&nbsp;&nbsp;
+
+
+
+                                                                                            </td>
+
+                                                                                            <td>
+                                                                                                <div style="position: relative;">
+                                                                                                    &nbsp;|&nbsp;<span id="docsource"></span>
+                                                                                                </div>
+                                                                                                <div class="sekuaibox" style="display: none; margin-left: 48px;" id="zihaoboxID">
+                                                                                                    <div style="padding-top: 10px; padding-left: 5px;">
+                                                                                                        <div class="lf360 danxunbt">
+                                                                                                            <input id="artdocfont3" onclick="ChangeArtSize(3, this); wzhitnew(15); " name="radio"
+                                                                                                                type="radio" value="1" />
+                                                                                                        </div>
+                                                                                                        <div class="lf360 danxunwz" onclick="ChangeArtSize(3,this);wzhitnew(15); " style="cursor: pointer;">
+                                                                                                            大
+                                                                                                        </div>
+                                                                                                        <div class="lf360 danxunbt">
+                                                                                                            <input id="artdocfont2" onclick="ChangeArtSize(2, this); wzhitnew(16); " name="radio"
+                                                                                                                type="radio" value="2" />
+                                                                                                        </div>
+                                                                                                        <div class="lf360 danxunwz" onclick="ChangeArtSize(2,this);wzhitnew(16); " style="cursor: pointer;">
+                                                                                                            中
+                                                                                                        </div>
+                                                                                                        <div class="lf360 danxunbt">
+                                                                                                            <input id="artdocfont1" onclick="ChangeArtSize(1, this); wzhitnew(17); " name="radio"
+                                                                                                                type="radio" value="3" />
+                                                                                                        </div>
+                                                                                                        <div class="lf360 danxunwz" onclick="ChangeArtSize(1,this);wzhitnew(17); " style="cursor: pointer;">
+                                                                                                            小
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="sekuaibox" style="margin-left: 76px; display: none;" id="sekuaiboxID">
+                                                                                                    <div style="padding-top: 10px; padding-left: 5px;">
+                                                                                                        <img src="http://pubimage.360doc.com/wz/cr1.gif" id="docArtC1" onclick="ChangeArtClass(1,this);wzhitnew(18);"
+                                                                                                            style="cursor: pointer;" /><img src="http://pubimage.360doc.com/wz/cr2.gif" id="docArtC2"
+                                                                                                                onclick="ChangeArtClass(2,this);wzhitnew(19);" style="cursor: pointer;" /><img src="http://pubimage.360doc.com/wz/cr3.gif"
+                                                                                                                    id="docArtC3" onclick="ChangeArtClass(3,this);wzhitnew(20);" style="cursor: pointer;" /><img
+                                                                                                                        src="http://pubimage.360doc.com/wz/cr4.gif" id="docArtC4" onclick="ChangeArtClass(4,this);wzhitnew(21);"
+                                                                                                                        style="cursor: pointer;" /><img src="http://pubimage.360doc.com/wz/cr5.gif" id="docArtC5"
+                                                                                                                            onclick="ChangeArtClass(5,this);wzhitnew(22);" style="cursor: pointer;" /><img src="http://pubimage.360doc.com/wz/cr6.gif"
+                                                                                                                                id="docArtC6" onclick="ChangeArtClass(6,this);wzhitnew(23);" style="cursor: pointer;" />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <div style="padding-left: 10px;">
+                                                                                                    <a href="javascript:void(0)">
+                                                                                                        <img onmouseover="changedivdisplay(1);" src="http://pubimage.360doc.com/wz/wz1.gif" /></a>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <div style="padding-left: 10px;" onmouseover="changedivdisplay(2);">
+                                                                                                    <a href="javascript:void(0)">
+                                                                                                        <img src="http://pubimage.360doc.com/wz/wz2.gif" /></a>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                            <td>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" onclick=" setTimeout(showShareLayer, 10);wzhitnew(4);">分享</a>&nbsp;</td>
+                                                                                            <td>
+                                                                                                <a href="#" onclick="  setTimeout(showShareLayer, 10);wzhitnew(5);">
+                                                                                                    <img style="cursor: pointer;" src="http://pubimage.360doc.com/wz/tb10.gif"></a><div
+                                                                                                        class="fenxiang" id="fenxiangLayer" style="display: none; border: none; width: 110px; margin-left: -28px; _margin-left: -40px;">
+                                                                                                    </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                            <div id="resavelayer1" class="rt360">
+                                                                            </div>
+
+
+                                                                            <div id="shareweixinabove" class="rt360">
+                                                                            </div>
+
+
+                                                                            <table cellpadding="0" cellspacing="0" style="text-align: center; margin: 0px auto;">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <div id="AlertArt1" style="display: none; position: absolute;">
+                                                                                            </div>
+                                                                                            <div id="SendToFriends1" style="display: none; position: absolute; z-index: 100;">
+                                                                                            </div>
+                                                                                            <div class="lf360 zcbutton" style="margin-left: 100px;">
+                                                                                            </div>
+                                                                                            <div class="lf360">
+                                                                                                &nbsp;&nbsp;
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        
+                                                        <table class="wenzhangcss" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="xiantao">
+                                                                        </div>
+
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" valign="top" width="670px" style="height: 200px;">
+                                                                        <span id="articlecontent" onmousedown="newhighlight = true;" onmouseup="NewHighlight(event)">
+                                                                            <table>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td width="670px" style="position: relative;">
+
+                                                                                            <DIV>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; BACKGROUND: #fefef2; WORD-BREAK: break-all; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-pagination: widow-orphan; mso-outline-level: 1" class=MsoNormal align=left><B><SPAN style="FONT-FAMILY: Verdana; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: 宋体; mso-font-kerning: 18.0pt" lang=EN-US><A href="http://www.cnblogs.com/zguoq2002/archive/2012/01/31/2332666.html"><SPAN style="COLOR: #075db3; TEXT-DECORATION: none; text-underline: none">Asp</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: #075db3; TEXT-DECORATION: none; text-underline: none; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana" lang=EN-US><SPAN lang=EN-US>连接</SPAN></SPAN><SPAN style="COLOR: #075db3; TEXT-DECORATION: none; text-underline: none">access</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: #075db3; TEXT-DECORATION: none; text-underline: none; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana" lang=EN-US><SPAN lang=EN-US>数据库时，报未知错误及错误码</SPAN></SPAN><SPAN style="COLOR: #075db3; TEXT-DECORATION: none; text-underline: none">-2147467259</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: #075db3; TEXT-DECORATION: none; text-underline: none; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana" lang=EN-US><SPAN lang=EN-US>的解决方案</SPAN></SPAN></A> <?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></B></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">ASP程序连接access数据库的代码如下：</SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">&lt;%</SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">set conn=server.createobject("adodb.connection")</SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">'连接数据库的方法1：使用oledb<BR>str="provider=microsoft.jet.oledb.4.0;data source=" &amp; server.mappath("学习.mdb")<BR>conn.open str<BR></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">%&gt;</SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">结果在服务器上运行该程序时提示如下错误：</SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana"></SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana"></SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>err.Number</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">显示的是</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>-2147467259,<BR>err.Description</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">显示的是</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">未知错误</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”</SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>迷惑了很久，当时在课堂上一直找不到原因。之前运行其他ASP程序都是好好的，一遇到数据库就出错了。很尴尬，跟学生解释说服务器出了点小问题，随后我解决了再告诉大家。硬着头皮接着讲课，其实很心虚。</SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>一下课，猛蹬着自行车回到家中，立马上网搜索答案。找了很久，决定下次上课试试这些方法行不行。</SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>下次上课我提早到教室。心说这次解决不了那以后就回机房上课好了。结果一次就成功了！欢呼！</SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>解决方案：</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>为”C:\Windows\<FONT color=#ff0000>Temp“目录添加用户Authenticated Users，为该用户开放所有权限。</FONT></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">（</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>1</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">）</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>WindowsXP</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">、</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>Windows 2003</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">用户请在</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>“C:\Windows\<FONT color=#ff0000>Temp</FONT>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">目录添加一个有权限的</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US><FONT color=#ff0000>“Authenticated Users”</FONT></SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">用户即可！</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US><BR>Vista</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">用户请在</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>“C:\Windows\ServiceProfiles\NetworkService\AppData\Local\Temp”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">目录添加一个有权限的</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>“Authenticated Users”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">用户即可！</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana"><FONT color=#ff0000><STRONG>具体设置权限步骤</STRONG></FONT>：右击</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>Temp</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">文件夹，选择</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">属性</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">安全</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">编辑</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">添加</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">，在下面的</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">输入对象名称来选择</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">中输入</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US><FONT color=#ff0000>Authenticated Users</FONT></SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">，确定</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US> -&gt; </SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">返回到</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>“Temp </SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">的权限</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">，将</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>Authenticated Users</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">的权限中的完全控制给勾上。</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 7.5pt 0cm; BACKGROUND: #fefef2; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">（</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>2</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">）临时测试解决方案。</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>WindowsXP</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">用户：打开</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>IIS</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">，右击相应网站，选择</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">属性</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">目录安全性</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">编辑</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">浏览</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">高级</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">立即查找</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“Administrator”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">确定</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">确定</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">确定</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”-&gt;“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">确定</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">。</SPAN><SPAN style="FONT-FAMILY: Verdana; COLOR: black; FONT-SIZE: 10pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN lang=EN-US><o:p><FONT face="Times New Roman">&nbsp;</FONT></o:p></SPAN></P>
+<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN lang=EN-US><o:p><FONT face="Times New Roman"></FONT></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal><SPAN lang=EN-US><o:p><FONT face="Times New Roman">但是有的时候会出现这样的问题：文件夹右键时没有“安全”选项卡。如何调出安全选项卡呢？请接着看下文：</FONT></o:p></SPAN></P><SPAN lang=EN-US><o:p>
+<P style="TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=center><B><SPAN style="FONT-FAMILY: 宋体; COLOR: blue; FONT-SIZE: 22pt; mso-bidi-font-family: Arial; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">让文件夹属性出现</SPAN></B><B><SPAN style="FONT-FAMILY: Arial; COLOR: blue; FONT-SIZE: 22pt" lang=EN-US>“</SPAN></B><B><SPAN style="FONT-FAMILY: 宋体; COLOR: blue; FONT-SIZE: 22pt; mso-bidi-font-family: Arial; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">安全</SPAN></B><B><SPAN style="FONT-FAMILY: Arial; COLOR: blue; FONT-SIZE: 22pt" lang=EN-US>”</SPAN></B><B><SPAN style="FONT-FAMILY: 宋体; COLOR: blue; FONT-SIZE: 22pt; mso-bidi-font-family: Arial; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">选项卡</SPAN></B><B><SPAN style="FONT-FAMILY: Arial; COLOR: blue; FONT-SIZE: 22pt" lang=EN-US><o:p></o:p></SPAN></B></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>1</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">：查看硬盘文件系统是</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>FAT32</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">还是</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>NTFS <o:p></o:p></SPAN></B></P>
+<P style="TEXT-ALIGN: left; TEXT-INDENT: 21pt; MARGIN: 0cm 0cm 12pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">打开</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">我的电脑</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">，右击盘符，例如</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>D</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">盘，点击</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">属性</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">，便会看到文件系统是</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>FAT32</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">还是</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>NTFS</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">了</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 12pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>2</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">：让</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>FAT32</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">文件系统中的文件夹属性里出现</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">安全</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>”</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">选项卡</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></B></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 12pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">　　要达到这一目的，只能将磁盘的文件系统类型由</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>FAT32</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">转换为</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>NTFS</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">，转换方式：</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 12pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">　　（</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>1</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">）点</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt"> </SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">开始</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt"> </SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">程序</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt"> </SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">附件</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt"> </SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">命令提示符（或在运行里输入</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“CMD”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">）；</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 12pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">　　（</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>2</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">）打开窗口以后，在光标的提示符下输入</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“convert e:/fs:ntfs /v”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">，然后回车。注意在</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“covert”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">的后面有一个空格。</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 12pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">这里是转换</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>E</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">盘，如果要转换</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>C</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">盘，则将</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>e</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">改成</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>c</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">；</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><BR></SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">　　（</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>3</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">）接着系统会要求你输入</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>X</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">盘的卷标，然后回车。</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">卷标在</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">我的电脑</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">中点</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>X</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">盘，然后看它的属性可以找到，或者也可以在命令行中输入</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“vol C: ”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">，便可查看</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>C</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">盘卷标。</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">这样就可简单地转换分区格式为</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>NTFS</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">了。这个方法只用于</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>FAT32</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">转为</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>NTFS</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">，</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: red; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">不能将</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: red; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>NTFS</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: red; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">转为</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: red; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>FAT32</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">。文件资料不会丢失。</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 12pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>3</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">：让</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>NTFS</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">文件系统中的文件夹属性里出现</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">安全</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>”</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">选项卡</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></B></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 12pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">　　如果</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>D</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">盘文件系统类型是</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>NTFS</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">，但其中的文件夹属性中没有出现安全选项卡，则按下面的操作步骤来设置：</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: left; MARGIN: 0cm 0cm 12pt; BACKGROUND: white; mso-pagination: widow-orphan" class=MsoNormal align=left><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">　　打开</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">我的电脑</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">，点击菜单栏</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">工具</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>”——“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">文件夹选项</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">，切换到</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">查看</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">选项卡，在里面找到</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">使用简单文件共享（推荐）</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">，将其前面的复选框中的勾去掉。现在重新查看</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>D</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">盘中的某一个文件夹属性，里面便有了</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>“</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">安全</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US>”</SPAN><SPAN style="FONT-FAMILY: 宋体; COLOR: black; mso-bidi-font-size: 10.5pt; mso-bidi-font-family: Arial; mso-font-kerning: 0pt; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">选项卡这一项。</SPAN><SPAN style="FONT-FAMILY: Arial; COLOR: black; mso-bidi-font-size: 10.5pt; mso-font-kerning: 0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P style="MARGIN: 0cm 0cm 0pt" class=MsoNormal></o:p></SPAN>&nbsp;</P></DIV>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <div id="viewerPlaceHolder" style="width: 717px; height: 700px; display: none;">
+                                                                            </div>
+                                                                        </span>
+                                                                        <table>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left">
+                                                                        <a name="anchordoc1" id="anchordoc1"></a>
+                                                                        <div style="height: 28px">
+                                                                            <div style="font-size: 14px; color: #797b7a; float: left;">
+                                                                                来自：<span class="name" onclick="wzhitnew(59)"><A href="http://www.360doc.com/userhome/9861" target="_blank">jojo1981</A></span>&nbsp;>&nbsp;<span
+                                                                                    id="cname" onclick="wzhitnew(60)"></span>
+                                                                            </div>
+                                                                            <div style="float: left;">
+                                                                                <div class="btzctsg" id="spanfollowstatus1">
+                                                                                </div>
+                                                                                <script>isfollow(9861);</script>
+
+                                                                            </div>
+                                                                            <div style="float: left;">
+                                                                                <div class="ytdh1"><a onclick="doctalk();wzhitnew(107);" href="javascript:void(0)"></a></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="modlist lf360 list" style="padding-top: 0px;">
+                                                                                <ul>
+                                                                                    <div id='lastart'>
+                                                                                    </div>
+                                                                                    <div id='nextart'>
+                                                                                    </div>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left">
+                                                                        <div style="padding-top: 12px;">
+                                                                            <div id='docAdBelowContent'>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="text-align: left;">
+                                                                        <div style="padding-top: 15px; width: 670px;">
+                                                                            <table style="width: 670px;" cellpadding="0" cellspacing="0">
+                                                                                <tbody>
+                                                                                    <tr>
+
+                                                                                        <td style="width: 530px;">
+                                                                                            <div class=" lf360" style="cursor: pointer" onmouseover="ChangeBtnStyle(1);" onmouseout="ChangeBtnStyle(2);">
+                                                                                                <div class="zscbt">
+                                                                                                    <a href="javascript:void(0);" onclick="SaveArt();wzhitnew(26);">
+                                                                                                        <div id="zscbtword" class="lf360 xianhua" style="padding-left: 38px;">
+                                                                                                            转藏到我的图书馆
+                                                                                                        </div>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div style="margin-left: 10px; cursor: pointer;" class="lf360 xhmainbox" id="sendflowerdiv"
+                                                                                                onclick='Showflowerlayer("sendedLayer1");wzhitnew(27)' onmouseover="ChangeFlowerBtnStyle(1);"
+                                                                                                onmouseout="ChangeFlowerBtnStyle(2);">
+
+                                                                                                <div id="flowimg2" class="lf360">
+                                                                                                    <div style="padding-left: 10px; padding-top: 10px;">
+                                                                                                        <img id="flowimg3" src="http://pubimage.360doc.com/wz/huahuanew.gif">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div id="flowimg5" class=" lf360 xianhua">
+                                                                                                    献花(<span id="articleflowernum">0</span>)<div id='flowernumadd' class="addtionone">
+                                                                                                        +1
+                                                                                                    </div>
+                                                                                                </div>
+
+                                                                                            </div>
+
+
+
+
+                                                                                            <div class="lf360" style="cursor: pointer; padding-left: 10px;" onmouseover="ChangeBtnStyle(3);" onmouseout="ChangeBtnStyle(4);">
+                                                                                                <div class="fxwxbt">
+
+                                                                                                    <a href="javascript:void(0);" onclick="shareWeixin();wzhitnew(64);">
+                                                                                                        <div id="fxwxword" class="lf360 xianhua" style="padding-left: 38px;">
+                                                                                                            分享到微信
+                                                                                                        </div>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </div>
+
+
+                                                                                             <div class="lf360" style="cursor: pointer; padding-left: 10px;" onmouseover="ChangeBtnStyle(5);" onmouseout="ChangeBtnStyle(6);">
+                                                                                                <div class="ywzwbt">
+
+                                                                                                    <a id="ywzwa" href=" http://www.baidu.com/s?wd=ntfs+%e6%96%87%e4%bb%b6%e5%a4%b9+%e9%80%89%e9%a1%b9&tn=SE_hldp01010_6r0gix1f" onclick="wzhitnew(100);" target="_blank">
+                                                                                                        <div id="ywzwword" class="lf360 xianhua" style="padding-left: 44px;">
+                                                                                                            以文找文
+                                                                                                        </div>
+                                                                                                    </a>
+
+                                                                                                </div>
+                                                                                            </div>
+
+
+                                                                                    
+                                                                                        </td>
+                                                                                        <td style="vertical-align: bottom; font-size: 12px;" width="140">
+                                                                                            <div class="rt360" id="sharediv2">
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="10"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="lswzbox" style="padding-top: 10px;">
+                            <div>
+                                <table cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td width="330" valign="top">
+                                                <div class="lswz" style="height: 300px;">
+                                                    <div class="lstwtop">
+                                                        <div class="lswztit">
+                                                            <div class=" lf360">
+                                                                <div class="titwx1">
+                                                                    类似文章
+                                                                </div>
+                                                            </div>
+                                                            <div class="rt360" style="padding-top: 5px; padding-right: 9px;">
+                                                                <a href=http://www.360doc.com/relevant/254731914_more.shtml  target='_blank'  onclick='wzhitnew(38)'>更多</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modlist2 list">
+                                                            <ul>
+                                                                
+                                                                        <li style="height: 30px; line-height: 30px;"><span>
+                                                                            <a href=http://www.360doc.com/content/10/0724/00/2633_41021336.shtml target=_blank onclick='wzhitnew(37)'>让文件夹属性出现“安全”选项卡</a></span></li>
+                                                                    
+                                                                        <li style="height: 30px; line-height: 30px;"><span>
+                                                                            <a href=http://www.360doc.com/content/13/0518/08/4299739_286252467.shtml target=_blank onclick='wzhitnew(37)'>如何把U盘从FAT32格式化成NTFS格式</a></span></li>
+                                                                    
+                                                                        <li style="height: 30px; line-height: 30px;"><span>
+                                                                            <a href=http://www.360doc.com/content/11/0418/00/404714_110407889.shtml target=_blank onclick='wzhitnew(37)'>如何将硬盘从FAT32转换为NTFS</a></span></li>
+                                                                    
+                                                                        <li style="height: 30px; line-height: 30px;"><span>
+                                                                            <a href=http://www.360doc.com/content/10/0223/17/136328_16577114.shtml target=_blank onclick='wzhitnew(37)'>右键属性没有安全选项解决方法</a></span></li>
+                                                                    
+                                                                        <li style="height: 30px; line-height: 30px;"><span>
+                                                                            <a href=http://www.360doc.com/content/11/1001/20/5472173_152677225.shtml target=_blank onclick='wzhitnew(37)'>将FAT32格式U盘转NTFS格式（图解）</a></span></li>
+                                                                    
+                                                                        <li style="height: 30px; line-height: 30px;"><span>
+                                                                            <a href=http://www.360doc.com/content/11/1219/23/686199_173513113.shtml target=_blank onclick='wzhitnew(37)'>如何将FAT32转换为NTFS</a></span></li>
+                                                                    
+                                                                        <li style="height: 30px; line-height: 30px;"><span>
+                                                                            <a href=http://www.360doc.com/content/11/0302/08/3115552_97352225.shtml target=_blank onclick='wzhitnew(37)'>如何把4G的U盘格式化成NTFS格式？</a></span></li>
+                                                                    
+                                                                        <li style="height: 30px; line-height: 30px;"><span>
+                                                                            <a href=http://www.360doc.com/content/11/0325/12/5988290_104455739.shtml target=_blank onclick='wzhitnew(37)'>怎样把U盘格式化成NTFS格式</a></span></li>
+                                                                    
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td width="330" valign="top">
+                                                <div class="lswz" style="margin-left: 9px; height: 300px;">
+                                                      <div class="lstwtop">
+                                                        <div class="lswztit">
+                                                            <div class=" lf360">
+                                                                <div class="titwx1">
+                                                                    热门推广
+                                                                </div>
+                                                            </div>
+                                                            <div class="rt360" style="padding-top: 5px; padding-right: 9px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="modlist2 list" id="dochotartabovecontent">
+                                                        
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div style="background-color: #fafafa; width: 670px; height: 317px; margin-top: 10px;">
+                                    <div style=' padding-top:7px; padding-left:12px; '> <div style=' height:30px;'><div class='titwx3 lf360'>猜你喜欢</div><div class=' rt360' style=' padding-right:18px;'><img onclick='changefiveart2("19999","19999");wzhitnew(62);' src='http://pubimage.360doc.com/wz/hyz.gif' onmouseover='this.src="http://pubimage.360doc.com/wz/hyza.gif"' onmouseout='this.src="http://pubimage.360doc.com/wz/hyz.gif"' width='76' height='24' style='cursor:pointer;' /></div></div><table cellpadding='0' cellspacing='0'><tr id='fivearttdid' style="height:138px"><td valign='top' width='131'><div><a onclick='wzhitnew(39);' href='http://www.360doc.com/content/14/0211/23/14102547_351770315.shtml' target='_blank'><img src='http://artpic.360doc.com/14/0226/09/351770315_201402260919030475.jpg' width='114' height='86'/></a></div><div class='lan twentit'><a  onclick='wzhitnew(40);' href='http://www.360doc.com/content/14/0211/23/14102547_351770315.shtml' target='_blank'>《家道》写得太好了</a></div></td><td valign='top' width='131'><div><a onclick='wzhitnew(39);' href='http://www.360doc.com/content/13/0607/18/1361014_291319686.shtml' target='_blank'><img src='http://artpic.360doc.com/13/1022/15/291319686_201310221550330983.jpg' width='114' height='86'/></a></div><div class='lan twentit'><a  onclick='wzhitnew(40);' href='http://www.360doc.com/content/13/0607/18/1361014_291319686.shtml' target='_blank'>蜂蜜香油汤让你排便,一爽到底</a></div></td><td valign='top' width='131'><div><a onclick='wzhitnew(39);' href='http://www.360doc.com/content/13/0107/09/1630322_258696536.shtml' target='_blank'><img src='http://artpic.360doc.com/13/1024/17/258696536_201310241711370655.jpg' width='114' height='86'/></a></div><div class='lan twentit'><a  onclick='wzhitnew(40);' href='http://www.360doc.com/content/13/0107/09/1630322_258696536.shtml' target='_blank'>视频精选：这些视频最近老好玩了</a></div></td><td valign='top' width='131'><div><a onclick='wzhitnew(39);' href='http://www.360doc.com/content/13/0429/00/6694401_281646601.shtml' target='_blank'><img src='http://artpic.360doc.com/13/0828/17/6694401_201308281739270915.jpg' width='114' height='86'/></a></div><div class='lan twentit'><a  onclick='wzhitnew(40);' href='http://www.360doc.com/content/13/0429/00/6694401_281646601.shtml' target='_blank'>过去的太空步都弱爆了</a></div></td><td valign='top' width='131'><div><a onclick='wzhitnew(39);' href='http://www.360doc.com/content/14/0310/18/13273127_359348752.shtml' target='_blank'><img src='http://artpic.360doc.com/14/0327/18/359348752_201403271802100995.jpg' width='114' height='86'/></a></div><div class='lan twentit'><a  onclick='wzhitnew(40);' href='http://www.360doc.com/content/14/0310/18/13273127_359348752.shtml' target='_blank'>让你尖叫的创意！</a></div></td></tr><tr id='fivearttdidtwo'><td valign='top' width='131'><div><a onclick='wzhitnew(39);' href='http://www.360doc.com/content/14/0323/22/4503649_363145733.shtml' target='_blank'><img src='http://artpic.360doc.com/14/0403/10/363145733_201404031000590417.jpg' width='114' height='86'/></a></div><div class='lan twentit'><a  onclick='wzhitnew(40);' href='http://www.360doc.com/content/14/0323/22/4503649_363145733.shtml' target='_blank'>人生可以不再计较的东西</a></div></td><td valign='top' width='131'><div><a onclick='wzhitnew(39);' href='http://www.360doc.com/content/14/0405/17/16350529_366595930.shtml' target='_blank'><img src='http://artpic.360doc.com/14/0419/15/366595930_201404191507190250.jpg' width='114' height='86'/></a></div><div class='lan twentit'><a  onclick='wzhitnew(40);' href='http://www.360doc.com/content/14/0405/17/16350529_366595930.shtml' target='_blank'>最具影响力的10大管理类书籍:选一本...</a></div></td><td valign='top' width='131'><div><a onclick='wzhitnew(39);' href='http://www.360doc.com/content/13/0306/02/9060464_269569979.shtml' target='_blank'><img src='http://artpic.360doc.com/13/0830/13/9060464_201308301313210875_a269569979.jpg' width='114' height='86'/></a></div><div class='lan twentit'><a  onclick='wzhitnew(40);' href='http://www.360doc.com/content/13/0306/02/9060464_269569979.shtml' target='_blank'>生活中的关系学—中国式人情隐规则</a></div></td><td valign='top' width='131'><div><a onclick='wzhitnew(39);' href='http://www.360doc.com/content/14/0401/10/547411_365402413.shtml' target='_blank'><img src='http://artpic.360doc.com/14/0410/00/547411_201404100010120824.jpg' width='114' height='86'/></a></div><div class='lan twentit'><a  onclick='wzhitnew(40);' href='http://www.360doc.com/content/14/0401/10/547411_365402413.shtml' target='_blank'>4月理发保吉运</a></div></td><td valign='top' width='131'><div><a onclick='wzhitnew(39);' href='http://www.360doc.com/content/14/0520/10/5265429_379262316.shtml' target='_blank'><img src='http://artpic.360doc.com/14/0526/00/5265429_201405260010190338.jpg' width='114' height='86'/></a></div><div class='lan twentit'><a  onclick='wzhitnew(40);' href='http://www.360doc.com/content/14/0520/10/5265429_379262316.shtml' target='_blank'>24小时长寿指南</a></div></td></tr></table></div>
+                                   
+                                    <div id="adabtest">
+                                    </div>
+
+                                </div>
+
+
+
+
+
+                                <div id="Reflction" style="padding-top: 15px; padding-left: 15px;">
+                                    <div id="360docRefTN">
+                                    </div>
+                                    <div id="360docRefCT">
+                                    </div>
+                                    <div id="360docRefPB" align="center">
+                                    </div>
+                                </div>
+                                <a name="sf"></a>
+                                
+                                <div id="ReflectionPart">
+                                    <div style="height: 206px; margin: 0px 0px;">
+                                        <div class="plbox">
+                                            <div class="plmain">
+                                                <div class="titwx" style="height: 23px;">
+                                                    发表评论：
+                                                </div>
+                                                <textarea name="SendRefTB" id="SendRefTB" style="width: 100%; height: 75px; border: 1px solid #e7e7e7; background-color: #fff; overflow: auto; font-size: 12px;"
+                                                    onfocus="testContent(1);" onblur="testContent(2)"></textarea>
+                                                <div style="text-align: right; padding-right: 3px; padding-top: 6px;">
+                                                    <div class="huifubt">
+                                                        <a id="ImgSendPL" href="javascript:void(0);"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td align="center" valign="top" width="18px"></td>
+                    <td align="left" valign="top" width="252px">
+                        
+
+
+<div style='height: 98px' id="artrightad1">
+ 
+</div>
+
+
+    <div  id="artrightnewarticle" class="remenwz" style="height:219px;"><div class="rementop"><div class="titwx" style=" padding-top:10px; padding-left:24px;">最新文章</div></div><div class="modlist3 list" style=" padding-left:15px;"><ul><li><span><a href=http://www.360doc.com/content/13/1127/17/9861_332612718.shtml target=_blank onclick='wzhitnew(51)'>Delphi：实现无边界窗体的移动</a></span></li><li><span><a href=http://www.360doc.com/content/13/1125/17/9861_332083481.shtml target=_blank onclick='wzhitnew(51)'>Delphi中Frame和Form有何区别</a></span></li><li><span><a href=http://www.360doc.com/content/13/1125/15/9861_332056842.shtml target=_blank onclick='wzhitnew(51)'>连接数据库 验证用户登录信息</a></span></li><li><span><a href=http://www.360doc.com/content/13/1120/16/9861_330791667.shtml target=_blank onclick='wzhitnew(51)'>实验四：查询语句练习</a></span></li><li><span><a href=http://www.360doc.com/content/13/1120/16/9861_330789904.shtml target=_blank onclick='wzhitnew(51)'>数据库竞赛题目及参考答案</a></span></li><li><span><a href=http://www.360doc.com/content/13/1024/22/9861_323876745.shtml target=_blank onclick='wzhitnew(51)'>如何使得Panel2上所有edit组件的readO...</a></span></li></ul> <div class=" rt360" style=" padding-right:23px;"><a href="http://www.360doc.com/userhome/9861" target="_blank" onclick="wzhitnew(52);">更多</a></div></div></div>
+
+
+<div class="both" style="padding-top: 10px; height: 260px;">
+   <iframe id="ifartad1" height="250px" width="250px" frameborder="0" scrolling="no"></iframe>
+    <div style="height: 10px;">
+    </div>
+</div>
+
+<div class="remenwz" id="artrighthotarticle">
+    <div class="rementop">
+        <div class="titwx" style="padding-top: 10px; padding-left: 24px;">
+            热门文章</div>
+    </div>
+    <div class="modlist3 list" style="padding-left: 15px;">
+        <ul>
+            
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0510/09/0_469365113.shtml target=_blank onclick='wzhitnew(55)'>【独家】万达高管培训教材曝光：万达...</a></span></li>
+                
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0501/18/0_467289518.shtml target=_blank onclick='wzhitnew(55)'>一剂中药半年不得感冒</a></span></li>
+                
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0611/07/0_477296071.shtml target=_blank onclick='wzhitnew(55)'>学好这些社交礼仪，你会发现自己变化...</a></span></li>
+                
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0917/16/0_499763418.shtml target=_blank onclick='wzhitnew(55)'>男人养肾的泡酒秘方， 强健身骨效果惊...</a></span></li>
+                
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0909/08/0_497830078.shtml target=_blank onclick='wzhitnew(55)'>神准!一张图就能完全看穿你内心潜在的...</a></span></li>
+                
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0822/07/0_493980195.shtml target=_blank onclick='wzhitnew(55)'>50个赚钱的实战营销案例</a></span></li>
+                
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0317/16/0_455848776.shtml target=_blank onclick='wzhitnew(55)'>万能料汁让凉拌菜身价翻数倍 快乐生活...</a></span></li>
+                
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0612/17/0_477678288.shtml target=_blank onclick='wzhitnew(55)'>简单易学的养生操，真的把各种职业病...</a></span></li>
+                
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0617/08/0_478673848.shtml target=_blank onclick='wzhitnew(55)'>各类重要证件丢失咋办 补证攻略</a></span></li>
+                
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0828/07/0_495314934.shtml target=_blank onclick='wzhitnew(55)'>卫生死角巧清理，第一条你就不知道！</a></span></li>
+                
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0329/18/0_459089946.shtml target=_blank onclick='wzhitnew(55)'>影响你未来几年命运的12项改革</a></span></li>
+                
+                    <li><span>
+                        <a href=http://www.360doc.com/content/15/0704/17/0_482605710.shtml target=_blank onclick='wzhitnew(55)'>中国各城市娶老婆成本要多少，看到上...</a></span></li>
+                
+        </ul>
+        <div class=" rt360" style="padding-right: 23px;">
+            <a href="http://www.360doc.com/readroom.html" target="_blank" onclick='wzhitnew(56)'>更多>></a></div>
+    </div>
+</div>
+
+<div class="both" style="padding-top: 10px;">
+    <iframe id="ifartad2" height="250px" width="250px" frameborder="0" scrolling="no"></iframe>
+</div>
+<br />
+
+
+ <iframe id="ifartrightsogou" height="328px" width="250px" frameborder="0" scrolling="no"></iframe>
+
+
+
+<script>
+    function change(pro_name, i) {
+        var pro = document.getElementById(pro_name); 
+        var pro_arr = pro.getElementsByTagName("span");
+
+        for (var m = 0; m < pro_arr.length; m++) {
+            pro_arr[m].className = "unclecked link_black";
+        }
+        pro_arr[i].className = "checked link_bai";
+
+        if (i == 1) {
+            document.getElementById("qh_ul_1").style.display = "";
+            document.getElementById("qh_ul_0").style.display = "none";
+        }
+        else if (i == 0) {
+            document.getElementById("qh_ul_1").style.display = "none";
+            document.getElementById("qh_ul_0").style.display = "";
+        }
+    }
+</script>
+
+                        <div class="both" id="divad5" style="padding-top: 11px; zoom: 1;">
+                            <div id="divad4" style="display: none;">
+                                <div>
+                                    <iframe id="ifartad" height="250px" width="250px" frameborder="0" scrolling="no"></iframe>
+                                </div>
+                                <div class="ggwz">
+                                    <a href="javascript:void(0);" onclick="closead(2);">关闭</a>
+                                </div>
+                                <div style="height: 13px;">
+                                </div>
+                            </div>
+                            <div style="clear: both; display: none;" id="divad6">
+                                <div id="adfloatbaidu">
+                                    <iframe id="ifartadfloadbaidu" height="250px" width="250px" frameborder="0" scrolling="no"></iframe>
+                                </div>
+                                <div class="ggwz">
+                                    <a href="javascript:void(0);" onclick="closead(3);">关闭</a>
+                                </div>
+                                <div style="height: 13px;">
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <input type="hidden" id="docarttitle" value="Asp%e8%bf%9e%e6%8e%a5access%e6%95%b0%e6%8d%ae%e5%ba%93%e6%97%b6%ef%bc%8c%e6%8a%a5%e6%9c%aa%e7%9f%a5%e9%94%99%e8%af%af%e5%8f%8a%e9%94%99%e8%af%af%e7%a0%81-2147467259%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" />
+    <input type="hidden" id="artreadroomid" value="0" />
+    <script>var asw='Asp%e8%bf%9e%e6%8e%a5access%e6%95%b0%e6%8d%ae%e5%ba%93%e6%97%b6%ef%bc%8c%e6%8a%a5%e6%9c%aa%e7%9f%a5%e9%94%99%e8%af%af%e5%8f%8a%e9%94%99%e8%af%af%e7%a0%81-2147467259%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88'</script>
+    <div id="docdiviframe"></div>
+
+
+    <script language="javascript" type="text/javascript">
+        var appName = navigator.appName.toLowerCase();
+        if (appName.indexOf("microsoft internet explorer") > -1) {
+            document.write("<scr" + "ipt type='text/javascript' src='http://www.360doc.com/js/StickySystemIE20130911.js?t=2015080301'></sc" + "ript>");
+        }
+        else {
+
+            document.write("<scr" + "ipt type='text/javascript' src='http://www.360doc.com/js/StickySystemOther20130911.js?t=2015080301'></sc" + "ript>");
+        }
+    </script>
+
+    <script>GerLookingUserInfo(1,9861,1,1,'-1',-1,10,0);OutputSource('http%3a%2f%2fwww.360doc.com%2fuserhome%2f9861');OutputCategory(9861,25,'%e3%80%8aASP%e7%bc%96%e7%a8%8b%e3%80%8b');OutputLastNextArt('%e8%87%aa%e5%8a%a8%e5%88%b7%e6%96%b0%e9%a1%b5%e9%9d%a2%e7%9a%84%e5%ae%9e%e7%8e%b0%e6%96%b9%e6%b3%95%e6%80%bb%e7%bb%93','http://www.360doc.com/content/11/1025/21/9861_159168291.shtml',0);OutputLastNextArt('asp%e7%bd%91%e9%a1%b5%e4%b8%ad%e5%af%bc%e5%87%ba%e6%95%b0%e6%8d%ae%e5%88%b0Excel%e8%ba%ab%e4%bb%bd%e8%af%81%e5%8f%b7%e7%a0%81%e6%98%be%e7%a4%ba%e7%a7%91%e5%ad%a6%e8%ae%a1%e6%95%b0%e6%b3%95%e4%bb%a5%e5%8f%8aExcel%e4%b8%ad%e6%95%b0%e5%ad%97%e5%89%8d...','http://www.360doc.com/content/13/0411/21/9861_277668786.shtml',1);</script>
+
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd86954201130d615136257dde062a503' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6857724" src="http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=384393"></script>
+
+    <script type="text/javascript">
+        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000);
+    </script>
+    <!-- Baidu Button END -->
+    <script src="http://bdimg.share.baidu.com/static/js/logger.js?cdnversion=384393"></script>
+
+
+</body>
+</html>

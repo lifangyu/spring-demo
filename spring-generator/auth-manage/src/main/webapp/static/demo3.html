@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>无标题文档</title>
+
+    <link rel="stylesheet" type="text/css" href="js/themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="js/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ztree.all-3.5.min.js"></script>
+
+<script type="text/javascript">  
+    $(function(){  
+        //setting （ztree配置，标准数据树，不需要任何配置）  
+        var setting = {
+                callback : {  
+                    onClick : function(event,treeId,treeNode,clickFlag){  //treeNode代表节点数据，可参照ztree中的api  
+                        if(treeNode.click==false){   //click为false不可以进行点击  
+                            return ;  
+                        }  
+                        //在tabs选项卡添加一个新的选项卡  
+                        if($('#mytabs').tabs('exists',treeNode.name)){ //treeNode.name对应数据zNodes中的name  
+                            //如果存在选项卡，切换到该选项卡中  
+                            $('#mytabs').tabs('select',treeNode.name);  
+                        }else{  
+                            //如果不存在选项卡，添加新的选项卡  
+                            $('#mytabs').tabs('add',{  
+                                title : treeNode.name,  
+                                content : '<div style="width:100%;height:100%;overflow:hidden;">'  
+                                    + '<iframe src="'  
+                                    + treeNode.page  
+                                    + '" scrolling="auto" style="width:100%;height:100%;border:0;" ></iframe></div>', // 可以局部刷新tab选项卡  
+                                closable : true //提供关闭选项卡的按钮                                    
+                            });                  
+                        }                              
+                    }                      
+                } 
+		
+		};  
+          
+        //数据zNodes,json格式  
+        var zNodes = [  
+               {name : '宙斯',  
+                   children : [ //childern 表示子节点  
+                       {name : '希腊', page:'http://www.baidu.com'},  
+                       {name : '诸神之王', page:'http://www.baidu.com'}  
+               ]}, //每一个{}表示一个节点  
+               {name : '阿波罗', 
+			    page:'http://www.baidu.com',
+                   children:[  
+                       {name : '太阳神',page:'http://www.baidu.com'}  
+            ]},  
+               {name : '波塞冬'}  
+        ];  
+        //初始化树  
+        $.fn.zTree.init($('#basetree'),setting,zNodes);  
+    });  
+</script>
+<script type="text/javascript">  
+    $(function(){  
+       var setting = {  
+                data : {  
+                    simpleData : {  
+                        enable : true //启用简单数据格式,其他参数可参照api自行设定（其实这样就行了）  
+                    }  
+                },  
+                callback : {  
+                    onClick : function(event,treeId,treeNode,clickFlag){  //treeNode代表节点数据，可参照ztree中的api  
+                        if(treeNode.click==false){   //click为false不可以进行点击  
+                            return ;  
+                        }  
+                        //在tabs选项卡添加一个新的选项卡  
+                        if($('#mytabs').tabs('exists',treeNode.name)){ //treeNode.name对应数据zNodes中的name  
+                            //如果存在选项卡，切换到该选项卡中  
+                            $('#mytabs').tabs('select',treeNode.name);  
+                        }else{  
+                            //如果不存在选项卡，添加新的选项卡  
+                            $('#mytabs').tabs('add',{  
+                                title : treeNode.name,  
+                                content : '<div style="width:100%;height:100%;overflow:hidden;">'  
+                                    + '<iframe src="'  
+                                    + treeNode.page  
+                                    + '" scrolling="auto" style="width:100%;height:100%;border:0;" ></iframe></div>', // 可以局部刷新tab选项卡  
+                                closable : true //提供关闭选项卡的按钮                                    
+                            });                  
+                        }                              
+                    }                      
+                }                  
+        };  
+        //数据  
+        var zNodes = [  
+            {id:1, pId:0, name:'英国'},      //id唯一标识，pId父节点：0表示该节点为顶级结点          
+            {id:11, pId:1, name:'伦敦'},                
+            {id:111, pId:11, name:'回锅菜鸟的博客',page:'http://blog.csdn.net/u012814041'},                
+            {id:2, pId:0, name:'冰岛',click:false},      //click:false 表示该选项卡不可以进行点击          
+            {id:3, pId:0, name:'法国'},                
+            {id:31, pId:3, name:'百度',page:'http://www.baidu.com'}                
+        ];  
+        //初始化树  
+        $.fn.zTree.init($('#simpletree'),setting,zNodes);  
+    });  
+</script> 
+<script type="text/javascript">  
+    $(function(){  
+       var setting = {  
+				async: {
+					enable: true,
+					type:"get",
+					contentType: "application/json",
+					url: "js/tree_data1.js",
+					autoParam: ["id", "name"],
+					dataFilter: filter
+				},  
+                callback : {  
+                    onClick : function(event,treeId,treeNode,clickFlag){  //treeNode代表节点数据，可参照ztree中的api  
+                        if(treeNode.click==false){   //click为false不可以进行点击  
+                            return ;  
+                        }  
+                        //在tabs选项卡添加一个新的选项卡  
+                        if($('#mytabs').tabs('exists',treeNode.name)){ //treeNode.name对应数据zNodes中的name  
+                            //如果存在选项卡，切换到该选项卡中  
+                            $('#mytabs').tabs('select',treeNode.name);  
+                        }else{  
+                            //如果不存在选项卡，添加新的选项卡  
+                            $('#mytabs').tabs('add',{  
+                                title : treeNode.name,  
+                                content : '<div style="width:100%;height:100%;overflow:hidden;">'  
+                                    + '<iframe src="'  
+                                    + treeNode.text  
+                                    + '" scrolling="auto" style="width:100%;height:100%;border:0;" ></iframe></div>', // 可以局部刷新tab选项卡  
+                                closable : true //提供关闭选项卡的按钮                                    
+                            });                  
+                        }                              
+                    }                      
+                }                  
+        };
+
+		function filter(treeId, parentNode, childNodes) {
+			if (!childNodes) return null;
+			for (var i=0, l=childNodes.length; i<l; i++) {
+				childNodes[i].name = childNodes[i].name.replace(/\.n/g, '.');
+			}
+			return childNodes;
+		}
+
+
+        //初始化树
+		$(document).ready(function(){
+			$.fn.zTree.init($('#ajaxztree'),setting);
+		}); 
+    });  
+</script>
+</head>
+<body class="easyui-layout">
+	<div region="north" style="height:50px;" >北部</div>
+	<div data-options="region:'south'" style="height: 30px;">南部</div>
+	<div data-options="region:'center'">
+		<!-- 这是一个选项卡布局 -->
+		<div id="mytabs" class="easyui-tabs" data-options="fit:true">
+			<!-- 每一个div 就是一个选项卡 -->
+			<div data-options="title:'选项卡一',iconCls:'icon-ok'">内容一</div>
+			<div data-options="title:'选项卡二',closable:true">内容二</div>
+			<div data-options="title:'选项卡三',closable:true"">内容三</div>
+		</div>
+	</div>
+	<div data-options="region:'west',title:'西方世界'" style="width:200px;" >
+		<!-- 折叠面板 -->
+		<div class="easyui-accordion" data-options="fit:true" >
+			<!-- 每个div都是一个面板 -->
+			<div data-options="title:'此计算机'" >
+            	<!-- ajax载入数据树 -->
+				<ul class="ztree" id="ajaxztree" ></ul>
+            </div>
+			<div data-options="title:'我的任务',iconCls:'icon-help'" >
+				<!-- 制作标准数据树 -->
+				<ul class="ztree" id="basetree" ></ul>
+			</div>
+			<div data-options="title:'我的文档'" >
+				<!-- 制作简单数据树 -->
+				<ul class="ztree" id="simpletree" ></ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
