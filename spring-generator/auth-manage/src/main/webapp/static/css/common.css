@@ -74,7 +74,7 @@ margin-right: 20px;}
 .color{color:#ff8560}
 .relative{position:relative}
 .fl{float:left}
-/* 閫氱敤鏍囬涓庤鍗曞彿灞曠ず*/
+/* 通用标题与订单号展示*/
 .header_title{position:relative;color:#333;text-indent:20px;font-size:16px;background-color:#f6f9fe;height:40px;line-height:40px;text-align:left;}
 .header_title span{font-weight:400}
 .header_title i{font-style:normal}
