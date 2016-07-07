@@ -5,12 +5,507 @@
   	<groupId>com.spring.demo</groupId>
     <artifactId>spring-parent</artifactId>
   	<version>1.0</version>
-    <relativePath/>
+  	<relativePath>../spring-parent/pom.xml</relativePath>
   </parent>
-   
+  <groupId>com.spring.demo</groupId>
   <artifactId>spring-web</artifactId>
-  <version>${spring.version}</version>
   <packaging>war</packaging>
   <name>spring-web</name>
   <url>http://maven.apache.org</url>
+  
+  	<properties>
+		<!-- 技术债 服务地址的配置
+		<sonar.host.url>http://jenkins.puhuitech.cn:9000/</sonar.host.url>
+		<sonar.sources>src/main</sonar.sources>
+		 -->
+		
+	</properties>
+	
+	<dependencies>
+
+		<!-- <dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-tomcat</artifactId>
+		</dependency>
+		<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+		</dependency> -->
+		
+		<!-- spring mvc start -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+		<!-- spring 单元测试 -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- servlet/jsp/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <scope>provided</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.tomcat.embed</groupId>
+		    <artifactId>tomcat-embed-jasper</artifactId>
+		    <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+				<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons-fileupload.version}</version>
+		</dependency>
+		<!-- 加载配置文件xml使用 -->
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>${commons-configuration.version}</version>
+		</dependency>
+		<!-- spring mvc end -->
+		<!--  dubbo  -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>${dubbo.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- zookeeper -->
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>${zkclient.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>${zookeeper.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- mysql 连接相关jar start -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis-spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- mybatis 分页插件 -->
+		 <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>${pagehelper.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.jsqlparser</groupId>
+            <artifactId>jsqlparser</artifactId>
+            <version>${jsqlparser.version}</version>
+        </dependency>
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper</artifactId>
+			<version>${mybatis-mapper.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>${persistence-api.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${alibaba_druid.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${c3p0.version}</version>
+			<!-- <scope>test</scope> -->
+		</dependency>
+		<!-- mysql 连接相关jar end -->
+		
+		<!-- Log start -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+		<!-- Log end -->
+		
+		<!-- shiro-start -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>${shiro-core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>${shiro-spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-ehcache</artifactId>
+			<version>${shiro-ehcache.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-cas</artifactId>
+			<version>${shiro-core.version}</version>
+		</dependency>
+		<!-- shiro-end -->
+		
+		<!-- json-start -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson-mapper-asl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-jaxb-annotations</artifactId>
+			<version>2.7.4</version>
+		</dependency>
+		<!-- json-end -->
+		
+		<!-- 私有jar 引入 -->
+		<dependency>
+			<groupId>com.spring.demo</groupId>
+			<artifactId>spring-comm</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+	</dependencies>
+	
+	<!-- 不同环节的集成配置  -->
+	<profiles>
+		<profile>
+			<id>development</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- test环节 单点登录配置 
+				<casServer.url>http://172.16.7.56:8092</casServer.url>
+				<casClient.url>http://localhost:8083</casClient.url>
+				<casServerTomcat.url>http://172.16.7.56:8092</casServerTomcat.url>
+				 -->
+				 <!--test环境 zookeeper 配置 
+				<zookeeper.address>zookeeper://172.16.7.56:40000</zookeeper.address> -->
+				<!-- test 环境redis配置 -->
+				<redis.host>172.16.7.56</redis.host>
+				<redis.port>6379</redis.port>
+			</properties>
+			<dependencies>
+                <!-- 使用swagger 生成 api doc -->
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger-ui</artifactId>
+                    <version>${swagger.version}</version>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger2</artifactId>
+                    <version>${swagger.version}</version>
+                    <scope>compile</scope>
+                </dependency>
+            </dependencies>
+		</profile>
+		
+		<profile>
+			<id>test</id>
+			<properties>
+				<!-- <casServer.url>http://172.16.7.56:8092</casServer.url>
+				<casClient.url>http://172.16.5.108:8087</casClient.url>
+				<casServerTomcat.url>http://172.16.7.56:8092</casServerTomcat.url>
+				<zookeeper.address>zookeeper://172.16.7.56:40000</zookeeper.address> -->
+				<redis.host>172.16.7.56</redis.host>
+				<redis.port>6379</redis.port>
+			</properties>
+			<dependencies>
+                <!-- api doc -->
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger-ui</artifactId>
+                    <version>${swagger.version}</version>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger2</artifactId>
+                    <version>${swagger.version}</version>
+                    <scope>compile</scope>
+                </dependency>
+            </dependencies>
+             <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <excludes>
+                            <exclude>**/*</exclude>
+                        </excludes>
+                    </resource>
+                </resources>
+            </build>
+		</profile>
+		<profile>
+			<id>uat</id>
+			<properties>
+				<casServer.url>http://uat.puhuifinance.com:9000</casServer.url>
+				<casClient.url>http://uat.puhuifinance.com:9000</casClient.url>
+				<casServerTomcat.url>http://172.16.7.10:8092</casServerTomcat.url>
+				<zookeeper.address>zookeeper://172.16.7.10:40000</zookeeper.address>
+				<redis.host>172.16.7.10</redis.host>
+				<redis.port>6379</redis.port>
+			</properties>
+			<dependencies>
+                <!-- api doc -->
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger-ui</artifactId>
+                    <version>${swagger.version}</version>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger2</artifactId>
+                    <version>${swagger.version}</version>
+                    <scope>compile</scope>
+                </dependency>
+            </dependencies>
+		</profile>
+		<profile>
+			<id>production</id>
+			<properties>
+				<casServer.url>https://inside.puhuifinance.com</casServer.url>
+				<casClient.url>http://inside.puhuifinance.com</casClient.url>
+				<casServerTomcat.url>http://passport.native.puhuifinance.com:8092</casServerTomcat.url>
+				<zookeeper.address>zookeeper.native.puhuifinance.com:40000</zookeeper.address>
+				<redis.host>redis.native.puhuifinance.com</redis.host>
+				<redis.port>6379</redis.port>
+			</properties>
+			<dependencies>
+                <!-- api doc -->
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger-ui</artifactId>
+                    <version>${swagger.version}</version>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger2</artifactId>
+                    <version>${swagger.version}</version>
+                    <scope>compile</scope>
+                </dependency>
+            </dependencies>
+		</profile>
+	</profiles>
+	
+	<build>
+	<resources>
+		<resource>
+			<directory>src/main/resources</directory>
+		</resource>
+		<resource>
+			<directory>src/main/java/assembly/conf</directory>
+		</resource>
+		<resource>
+			<directory>src/main/resources/</directory>
+			<filtering>true</filtering>
+		</resource>
+		<resource>
+			<directory>src/main/java/assembly/conf</directory>
+			<excludes>
+				<exclude>
+          				**/*.ser
+          			</exclude>
+			</excludes>
+			<filtering>true</filtering>
+		</resource>
+	</resources>
+	<pluginManagement>
+           <plugins>
+           <!--  插件的配置 -->
+           
+           <!-- 要将源码放上去，需要加入这个插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+           <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.2</version>
+                <configuration>
+                    <verbose>true</verbose>
+                    <overwrite>true</overwrite>
+                </configuration>
+           </plugin>
+           <!-- java 编译插件  -->
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <configuration>
+                   <source>${jdk.version}</source>
+                   <target>${jdk.version}</target>
+                   <!--解决Swagger中文乱码问题 -->
+                   <encoding>UTF-8</encoding>
+                   <showWarnings>true</showWarnings>
+               </configuration>
+           </plugin>
+           <plugin>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-maven-plugin</artifactId>
+           </plugin>
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-javadoc-plugin</artifactId>
+               <configuration>
+                   <encoding>UTF-8</encoding>
+               </configuration>
+           </plugin>
+           </plugins>
+       </pluginManagement>
+	</build>
 </project>

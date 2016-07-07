@@ -1,0 +1,233 @@
+[
+	{
+		"id": 1,
+		"text": "My Documents",
+		"children": [
+			{
+				"id": 11,
+				"text": "Photos",
+				"icon": "icon-add",
+				"url":"http://www.baidu.com",
+				"children": [
+					{
+						"id": 111,
+						"text": "Friend",
+						"icon": "icon-set",
+						"url": "#"
+					},
+					{
+						"id": 112,
+						"text": "Wife",
+						"url": "#"
+					},
+					{
+						"id": 113,
+						"text": "我的文档",
+						"icon": "icon-role",
+						"url": "#"
+					}
+				]
+			},
+			{
+				"id": 12,
+				"text": "Program Files",
+				"children": [
+					{
+						"id": 121,
+						"text": "Intel",
+						"icon": "icon-role",
+						"url": "#"
+					},
+					{
+						"id": 122,
+						"text": "Java",
+						"url": "#"
+					},
+					{
+						"id": 123,
+						"text": "Microsoft Office",
+						"url": "#"
+					},
+					{
+						"id": 124,
+						"text": "Games",
+						"children": [
+							{
+								"id": 1241,
+								"text": "Intel",
+								"url": "#"
+							},
+							{
+								"id": 1242,
+								"text": "Java",
+								"url": "#"
+							},
+							{
+								"id": 1243,
+								"text": "Microsoft Office",
+								"children": [
+									{
+										"id": 12431,
+										"text": "Intel",
+										"url": "#"
+									},
+									{
+										"id": 12432,
+										"text": "Java",
+										"url": "#"
+									},
+									{
+										"id": 12433,
+										"text": "Microsoft Office",
+										"url": "#"
+									},
+									{
+										"id": 12434,
+										"text": "Games",
+										"url": "#"
+									}
+								]
+							},
+							{
+								"id": 1244,
+								"text": "Games",
+								"url": "#"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"text": "index.html",
+				"url": "#"
+			},
+			{
+				"id": 14,
+				"text": "about.html",
+				"url": "#"
+			},
+			{
+				"id": 15,
+				"text": "welcome.html",
+				"url": "#"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"text": "系统管理",
+		"icon":"icon-add",
+		"children": [
+			{
+				"id": 11,
+				"text": "Photos1",
+				"icon": "icon-add",
+				"url":"http://www.baidu.com",
+				"children": [
+					{
+						"id": 111,
+						"text": "Friend1",
+						"icon": "icon-set",
+						"url": "#"
+					},
+					{
+						"id": 112,
+						"text": "Wife",
+						"url": "#"
+					},
+					{
+						"id": 113,
+						"text": "我的文档",
+						"icon": "icon-role",
+						"url": "#"
+					}
+				]
+			},
+			{
+				"id": 12,
+				"text": "Program Files",
+				"children": [
+					{
+						"id": 121,
+						"text": "Intel",
+						"icon": "icon-role",
+						"url": "#"
+					},
+					{
+						"id": 122,
+						"text": "Java",
+						"url": "#"
+					},
+					{
+						"id": 123,
+						"text": "Microsoft Office",
+						"url": "#"
+					},
+					{
+						"id": 124,
+						"text": "Games",
+						"children": [
+							{
+								"id": 1241,
+								"text": "Intel",
+								"url": "#"
+							},
+							{
+								"id": 1242,
+								"text": "Java",
+								"url": "#"
+							},
+							{
+								"id": 1243,
+								"text": "Microsoft Office",
+								"children": [
+									{
+										"id": 12431,
+										"text": "Intel",
+										"url": "#"
+									},
+									{
+										"id": 12432,
+										"text": "Java",
+										"url": "#"
+									},
+									{
+										"id": 12433,
+										"text": "Microsoft Office",
+										"url": "#"
+									},
+									{
+										"id": 12434,
+										"text": "Games",
+										"url": "#"
+									}
+								]
+							},
+							{
+								"id": 1244,
+								"text": "Games",
+								"url": "#"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"text": "index.html",
+				"url": "#"
+			},
+			{
+				"id": 14,
+				"text": "about.html",
+				"url": "#"
+			},
+			{
+				"id": 15,
+				"text": "welcome.html",
+				"url": "#"
+			}
+		]
+	}
+]

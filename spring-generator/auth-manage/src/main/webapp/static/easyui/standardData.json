@@ -1,0 +1,2009 @@
+﻿[
+    {
+        "id": "1",
+        "pId": "0",
+        "name": "手风琴Accordion",
+        "file": "accordion",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "101",
+                "pId": "1",
+                "name": "手风琴控制",
+                "url": "demo/accordion/actions.html",
+                "icon": "icon-add"
+            },
+            {
+                "id": "102",
+                "pId": "1",
+                "name": "Ajax载入手风琴内容",
+                "file": "ajax",
+                "icon": "icon-add"
+            },
+            {
+                "id": "103",
+                "pId": "1",
+                "name": "基础手风琴",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "104",
+                "pId": "1",
+                "name": "打开的手风琴",
+                "file": "expandable",
+                "icon": "icon-add"
+            },
+            {
+                "id": "105",
+                "pId": "1",
+                "name": "流式手风琴",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "106",
+                "pId": "1",
+                "name": "多个手风琴面板",
+                "file": "multiple",
+                "icon": "icon-add"
+            },
+            {
+                "id": "107",
+                "pId": "1",
+                "name": "手风琴工具组",
+                "file": "tools",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "pId": "0",
+        "name": "日历Calendar",
+        "file": "calendar",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "108",
+                "pId": "2",
+                "name": "基本日历",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "109",
+                "pId": "2",
+                "name": "自定义日历",
+                "file": "custom",
+                "icon": "icon-add"
+            },
+            {
+                "id": "110",
+                "pId": "2",
+                "name": "禁用的日历日期",
+                "file": "disabledate",
+                "icon": "icon-add"
+            },
+            {
+                "id": "111",
+                "pId": "2",
+                "name": "每周的第一天",
+                "file": "firstday",
+                "icon": "icon-add"
+            },
+            {
+                "id": "112",
+                "pId": "2",
+                "name": "流式日历",
+                "file": "fluid",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "pId": "0",
+        "name": "组合Combo",
+        "file": "combo",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "113",
+                "pId": "3",
+                "name": "基础组合",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "114",
+                "pId": "3",
+                "name": "动画效果",
+                "file": "animation",
+                "icon": "icon-add"
+            },
+            {
+                "id": "4",
+                "pId": "0",
+                "name": "组合框ComboBox",
+                "file": "combobox",
+                "icon": "icon-add",
+                "children": [
+                    {
+                        "id": "115",
+                        "pId": "4",
+                        "name": "基础组合框",
+                        "file": "basic",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "id": "116",
+                        "pId": "4",
+                        "name": "流式组合框",
+                        "file": "fluid",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "id": "117",
+                        "pId": "4",
+                        "name": "组合框操作",
+                        "file": "actions",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "id": "118",
+                        "pId": "4",
+                        "name": "自定义组合框格式",
+                        "file": "customformat",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "id": "119",
+                        "pId": "4",
+                        "name": "加载动态组合框数据",
+                        "file": "dynamicdata",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "id": "120",
+                        "pId": "4",
+                        "name": "组合框组",
+                        "file": "group",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "id": "121",
+                        "pId": "4",
+                        "name": "带额外图标的组合框",
+                        "file": "icons",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "id": "122",
+                        "pId": "4",
+                        "name": "多行组合框",
+                        "file": "multiline",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "id": "123",
+                        "pId": "4",
+                        "name": "多项选择",
+                        "file": "multiple",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "id": "124",
+                        "pId": "4",
+                        "name": "组合框导航",
+                        "file": "navigation",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "id": "125",
+                        "pId": "4",
+                        "name": "绑定远程数据",
+                        "file": "remotedata",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "id": "126",
+                        "pId": "4",
+                        "name": "远程JSONP",
+                        "file": "remotejsonp",
+                        "icon": "icon-add"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "pId": "0",
+        "name": "组合网络ComboGrid",
+        "file": "combogrid",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "127",
+                "pId": "5",
+                "name": "基础组合表格",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "128",
+                "pId": "5",
+                "name": "组合表格控制",
+                "file": "actions",
+                "icon": "icon-add"
+            },
+            {
+                "id": "129",
+                "pId": "5",
+                "name": "流式组合表格",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "130",
+                "pId": "5",
+                "name": "组合表格初始化",
+                "file": "initvalue",
+                "icon": "icon-add"
+            },
+            {
+                "id": "131",
+                "pId": "5",
+                "name": "多行组合表格",
+                "file": "multiple",
+                "icon": "icon-add"
+            },
+            {
+                "id": "132",
+                "pId": "5",
+                "name": "导航组合表格",
+                "file": "navigation",
+                "icon": "icon-add"
+            },
+            {
+                "id": "133",
+                "pId": "5",
+                "name": "指定设置值",
+                "file": "setvalue",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "pId": "0",
+        "name": "组合树ComboTree",
+        "file": "combotree",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "134",
+                "pId": "6",
+                "name": "基本组合树",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "135",
+                "pId": "6",
+                "name": "流式组合树",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "136",
+                "pId": "6",
+                "name": "组合树控制",
+                "file": "actions",
+                "icon": "icon-add"
+            },
+            {
+                "id": "137",
+                "pId": "6",
+                "name": "组合树的初始化",
+                "file": "initvalue",
+                "icon": "icon-add"
+            },
+            {
+                "id": "138",
+                "pId": "6",
+                "name": "多个组合树",
+                "file": "multiple",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "pId": "0",
+        "name": "数据表格DataGrid",
+        "file": "datagrid",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "334",
+                "pId": "7",
+                "name": "基础数据表格",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "139",
+                "pId": "7",
+                "name": "流式数据网格",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "140",
+                "pId": "7",
+                "name": "数据表格DataGrid的列对齐",
+                "file": "aligncolumns",
+                "icon": "icon-add"
+            },
+            {
+                "id": "141",
+                "pId": "7",
+                "name": "数据表格的编辑缓存",
+                "file": "cacheeditor",
+                "icon": "icon-add"
+            },
+            {
+                "id": "142",
+                "pId": "7",
+                "name": "数据表格的单元格编辑",
+                "file": "cellediting",
+                "icon": "icon-add"
+            },
+            {
+                "id": "143",
+                "pId": "7",
+                "name": "数据表格单元格风格",
+                "file": "cellstyle",
+                "icon": "icon-add"
+            },
+            {
+                "id": "144",
+                "pId": "7",
+                "name": "数据表格DataGrid上的复选框选择",
+                "file": "checkbox",
+                "icon": "icon-add"
+            },
+            {
+                "id": "145",
+                "pId": "7",
+                "name": "数据表格的客户端分页",
+                "file": "clientpagination",
+                "icon": "icon-add"
+            },
+            {
+                "id": "146",
+                "pId": "7",
+                "name": "栏目组",
+                "file": "columngroup",
+                "icon": "icon-add"
+            },
+            {
+                "id": "147",
+                "pId": "7",
+                "name": "数据表格复杂工具栏",
+                "file": "complextoolbar",
+                "icon": "icon-add"
+            },
+            {
+                "id": "148",
+                "pId": "7",
+                "name": "数据表格DataGrid中的语境菜单",
+                "file": "contextmenu",
+                "icon": "icon-add"
+            },
+            {
+                "id": "149",
+                "pId": "7",
+                "name": "自定义数据表格分页",
+                "file": "custompager",
+                "icon": "icon-add"
+            },
+            {
+                "id": "150",
+                "pId": "7",
+                "name": "数据表格的尾行",
+                "file": "footer",
+                "icon": "icon-add"
+            },
+            {
+                "id": "151",
+                "pId": "7",
+                "name": "数据表格的列格式",
+                "file": "formatcolumns",
+                "icon": "icon-add"
+            },
+            {
+                "id": "152",
+                "pId": "7",
+                "name": "数据表格的固定列",
+                "file": "frozencolumns",
+                "icon": "icon-add"
+            },
+            {
+                "id": "153",
+                "pId": "7",
+                "name": "在数据表格中冻结的行",
+                "file": "frozenrows",
+                "icon": "icon-add"
+            },
+            {
+                "id": "154",
+                "pId": "7",
+                "name": "数据表格合并单元格",
+                "file": "mergecells",
+                "icon": "icon-add"
+            },
+            {
+                "id": "155",
+                "pId": "7",
+                "name": "多项分类",
+                "file": "multisorting",
+                "icon": "icon-add"
+            },
+            {
+                "id": "156",
+                "pId": "7",
+                "name": "数据表格的行边距",
+                "file": "rowborder",
+                "icon": "icon-add"
+            },
+            {
+                "id": "157",
+                "pId": "7",
+                "name": "数据表格的行编辑",
+                "file": "rowediting",
+                "icon": "icon-add"
+            },
+            {
+                "id": "158",
+                "pId": "7",
+                "name": "数据表格的行风格",
+                "file": "rowstyle",
+                "icon": "icon-add"
+            },
+            {
+                "id": "159",
+                "pId": "7",
+                "name": "数据表格选择器",
+                "file": "selection",
+                "icon": "icon-add"
+            },
+            {
+                "id": "160",
+                "pId": "7",
+                "name": "带工具栏的数据表格",
+                "file": "simpletoolbar",
+                "icon": "icon-add"
+            },
+            {
+                "id": "161",
+                "pId": "7",
+                "name": "数据表格的变换表",
+                "file": "transform",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "pId": "0",
+        "name": "数据列表DataList",
+        "file": "datalist",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "162",
+                "pId": "8",
+                "name": "基本的数据列表",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "163",
+                "pId": "8",
+                "name": "分组的数据列表",
+                "file": "group",
+                "icon": "icon-add"
+            },
+            {
+                "id": "164",
+                "pId": "8",
+                "name": "复选框的数据列表",
+                "file": "checkbox",
+                "icon": "icon-add"
+            },
+            {
+                "id": "165",
+                "pId": "8",
+                "name": "多行选定的数据列表",
+                "file": "multiselect",
+                "icon": "icon-add"
+            },
+            {
+                "id": "166",
+                "pId": "8",
+                "name": "远程数据的数据列表",
+                "file": "remotedata",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "pId": "0",
+        "name": "日期框DateBox",
+        "file": "datebox",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "167",
+                "pId": "9",
+                "name": "基本的日期框",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "168",
+                "pId": "9",
+                "name": "流式日期框",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "169",
+                "pId": "9",
+                "name": "日期框按钮",
+                "file": "buttons",
+                "icon": "icon-add"
+            },
+            {
+                "id": "170",
+                "pId": "9",
+                "name": "克隆日期框",
+                "file": "clone",
+                "icon": "icon-add"
+            },
+            {
+                "id": "171",
+                "pId": "9",
+                "name": "日期格式",
+                "file": "dateformat",
+                "icon": "icon-add"
+            },
+            {
+                "id": "172",
+                "pId": "9",
+                "name": "日期框事件",
+                "file": "events",
+                "icon": "icon-add"
+            },
+            {
+                "id": "173",
+                "pId": "9",
+                "name": "日期框的日期范围限制",
+                "file": "restrict",
+                "icon": "icon-add"
+            },
+            {
+                "id": "174",
+                "pId": "9",
+                "name": "日期框的共享日历",
+                "file": "sharedcalendar",
+                "icon": "icon-add"
+            },
+            {
+                "id": "175",
+                "pId": "9",
+                "name": "日期框验证",
+                "file": "validate",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "pId": "0",
+        "name": "日期时间框DateTimeBox",
+        "file": "datetimebox",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "176",
+                "pId": "10",
+                "name": "基础日期时间框",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "177",
+                "pId": "10",
+                "name": "流式日期时间框",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "178",
+                "pId": "10",
+                "name": "日期时间框的初始化值",
+                "file": "initvalue",
+                "icon": "icon-add"
+            },
+            {
+                "id": "179",
+                "pId": "10",
+                "name": "显示到秒",
+                "file": "showseconds",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "pId": "0",
+        "name": "日期时间微调DateTimeSpinner",
+        "file": "datetimespinner",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "180",
+                "pId": "11",
+                "name": "基本的版本",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "181",
+                "pId": "11",
+                "name": "流式日期时间调节器",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "182",
+                "pId": "11",
+                "name": "带清除图标的日期时间调节器",
+                "file": "clearicon",
+                "icon": "icon-add"
+            },
+            {
+                "id": "183",
+                "pId": "11",
+                "name": "日期时间调节器格式",
+                "file": "format",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "pId": "0",
+        "name": "对话框Dialog",
+        "file": "dialog",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "184",
+                "pId": "12",
+                "name": "基本对话框",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "185",
+                "pId": "12",
+                "name": "流式对话框",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "186",
+                "pId": "12",
+                "name": "对话框上的复杂工具栏",
+                "file": "complextoolbar",
+                "icon": "icon-add"
+            },
+            {
+                "id": "187",
+                "pId": "12",
+                "name": "工具栏和按钮组",
+                "file": "toolbarbuttons",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "13",
+        "pId": "0",
+        "name": "拖拽Draggable",
+        "file": "draggable",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "188",
+                "pId": "13",
+                "name": "基础拖动",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "189",
+                "pId": "13",
+                "name": "约束拖动",
+                "file": "constrain",
+                "icon": "icon-add"
+            },
+            {
+                "id": "190",
+                "pId": "13",
+                "name": "快速拖动",
+                "file": "snap",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "14",
+        "pId": "0",
+        "name": "可拖拽的Droppable",
+        "file": "droppable",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "191",
+                "pId": "14",
+                "name": "基本的拖拽",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "192",
+                "pId": "14",
+                "name": "接收一个拖拽",
+                "file": "accept",
+                "icon": "icon-add"
+            },
+            {
+                "id": "193",
+                "pId": "14",
+                "name": "改变项目排序",
+                "file": "sort",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "15",
+        "pId": "0",
+        "name": "加载器EasyLoader",
+        "file": "easyloader",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "194",
+                "pId": "15",
+                "name": "基本的加载",
+                "file": "basic",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "16",
+        "pId": "0",
+        "name": "文件框FileBox",
+        "file": "filebox",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "195",
+                "pId": "16",
+                "name": "基本文件框",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "196",
+                "pId": "16",
+                "name": "流式文件框",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "197",
+                "pId": "16",
+                "name": "文件框上的按钮对齐",
+                "file": "buttonalign",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "17",
+        "pId": "0",
+        "name": "表单Form",
+        "file": "form",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "198",
+                "pId": "17",
+                "name": "基础表单",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "199",
+                "pId": "17",
+                "name": "加载表单数据",
+                "file": "load",
+                "icon": "icon-add"
+            },
+            {
+                "id": "200",
+                "pId": "17",
+                "name": "验证表单提交",
+                "file": "validateonsubmit",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "18",
+        "pId": "0",
+        "name": "布局Layout",
+        "file": "layout",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "201",
+                "pId": "18",
+                "name": "基础布局",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "202",
+                "pId": "18",
+                "name": "流式布局",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "203",
+                "pId": "18",
+                "name": "添加和移除布局",
+                "file": "addremove",
+                "icon": "icon-add"
+            },
+            {
+                "id": "204",
+                "pId": "18",
+                "name": "自适应高度布局",
+                "file": "autoheight",
+                "icon": "icon-add"
+            },
+            {
+                "id": "205",
+                "pId": "18",
+                "name": "折叠标题显示布局",
+                "file": "collapsetitle",
+                "icon": "icon-add"
+            },
+            {
+                "id": "206",
+                "pId": "18",
+                "name": "复杂布局",
+                "file": "complex",
+                "icon": "icon-add"
+            },
+            {
+                "id": "207",
+                "pId": "18",
+                "name": "自定义折叠的布局",
+                "file": "customcollapsetitle",
+                "icon": "icon-add"
+            },
+            {
+                "id": "208",
+                "pId": "18",
+                "name": "全屏布局",
+                "file": "full",
+                "icon": "icon-add"
+            },
+            {
+                "id": "209",
+                "pId": "18",
+                "name": "嵌套布局",
+                "file": "nestedlayout",
+                "icon": "icon-add"
+            },
+            {
+                "id": "210",
+                "pId": "18",
+                "name": "没有折叠按钮的布局",
+                "file": "nocollapsible",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "19",
+        "pId": "0",
+        "name": "链接按钮LinkButton",
+        "file": "linkbutton",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "211",
+                "pId": "19",
+                "name": "基础链接按钮",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "212",
+                "pId": "19",
+                "name": "流式链接按钮",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "213",
+                "pId": "19",
+                "name": "按钮组",
+                "file": "group",
+                "icon": "icon-add"
+            },
+            {
+                "id": "214",
+                "pId": "19",
+                "name": "链接按钮上的图标对齐",
+                "file": "iconalign",
+                "icon": "icon-add"
+            },
+            {
+                "id": "215",
+                "pId": "19",
+                "name": "平原链接按钮",
+                "file": "plain",
+                "icon": "icon-add"
+            },
+            {
+                "id": "216",
+                "pId": "19",
+                "name": "链接按钮大小",
+                "file": "size",
+                "icon": "icon-add"
+            },
+            {
+                "id": "217",
+                "pId": "19",
+                "name": "链接按钮风格",
+                "file": "style",
+                "icon": "icon-add"
+            },
+            {
+                "id": "218",
+                "pId": "19",
+                "name": "按钮开关",
+                "file": "toggle",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "20",
+        "pId": "0",
+        "name": "菜单Menu",
+        "file": "menu",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "219",
+                "pId": "20",
+                "name": "基础菜单",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "220",
+                "pId": "20",
+                "name": "自定义菜单项",
+                "file": "customitem",
+                "icon": "icon-add"
+            },
+            {
+                "id": "221",
+                "pId": "20",
+                "name": "菜单事件",
+                "file": "events",
+                "icon": "icon-add"
+            },
+            {
+                "id": "222",
+                "pId": "20",
+                "name": "Inline Menu",
+                "file": "inline",
+                "icon": "icon-add"
+            },
+            {
+                "id": "223",
+                "pId": "20",
+                "name": "Keyboard Navigation in Menu",
+                "file": "nav",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "21",
+        "pId": "0",
+        "name": "菜单按钮MenuButton",
+        "file": "menubutton",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "224",
+                "pId": "21",
+                "name": "基础菜单按钮",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "225",
+                "pId": "21",
+                "name": "菜单按钮操作",
+                "file": "actions",
+                "icon": "icon-add"
+            },
+            {
+                "id": "226",
+                "pId": "21",
+                "name": "菜单按钮上的菜单对齐",
+                "file": "alignment",
+                "icon": "icon-add"
+            },
+            {
+                "id": "227",
+                "pId": "21",
+                "name": "eyboard Navigation in MenuButton",
+                "file": "nav",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "22",
+        "pId": "0",
+        "name": "消息Messager",
+        "file": "messager",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "228",
+                "pId": "22",
+                "name": "基础消息框",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "229",
+                "pId": "22",
+                "name": "提示消息",
+                "file": "alert",
+                "icon": "icon-add"
+            },
+            {
+                "id": "230",
+                "pId": "22",
+                "name": "交互式消息",
+                "file": "interactive",
+                "icon": "icon-add"
+            },
+            {
+                "id": "231",
+                "pId": "22",
+                "name": "消息框位置",
+                "file": "position",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "23",
+        "pId": "0",
+        "name": "号码框NumberBox",
+        "file": "numberbox",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "232",
+                "pId": "23",
+                "name": "基础数值框",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "233",
+                "pId": "23",
+                "name": "流式数字框",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "234",
+                "pId": "23",
+                "name": "数值框格式",
+                "file": "format",
+                "icon": "icon-add"
+            },
+            {
+                "id": "235",
+                "pId": "23",
+                "name": "数值范围",
+                "file": "range",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "24",
+        "pId": "0",
+        "name": "数字调整器NumberSpinner",
+        "file": "numberspinner",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "236",
+                "pId": "24",
+                "name": "基础数字调整器",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "237",
+                "pId": "24",
+                "name": "流式数字调整器",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "238",
+                "pId": "24",
+                "name": "数字增量",
+                "file": "increment",
+                "icon": "icon-add"
+            },
+            {
+                "id": "239",
+                "pId": "24",
+                "name": "号码范围",
+                "file": "range",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "25",
+        "pId": "0",
+        "name": "分页Pagination",
+        "file": "pagination",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "240",
+                "pId": "25",
+                "name": "基础分页",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "241",
+                "pId": "25",
+                "name": "安装其他组件",
+                "file": "attaching",
+                "icon": "icon-add"
+            },
+            {
+                "id": "242",
+                "pId": "25",
+                "name": "自定义分页按钮",
+                "file": "custombuttons",
+                "icon": "icon-add"
+            },
+            {
+                "id": "243",
+                "pId": "25",
+                "name": "分页布局",
+                "file": "layout",
+                "icon": "icon-add"
+            },
+            {
+                "id": "244",
+                "pId": "25",
+                "name": "分页链接",
+                "file": "links",
+                "icon": "icon-add"
+            },
+            {
+                "id": "245",
+                "pId": "25",
+                "name": "简化的分页",
+                "file": "simple",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "26",
+        "pId": "0",
+        "name": "面板Panel",
+        "file": "panel",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "246",
+                "pId": "26",
+                "name": "基础面板",
+                "file": "Basic Panel",
+                "icon": "icon-add"
+            },
+            {
+                "id": "247",
+                "pId": "26",
+                "name": "流式面板",
+                "file": "Fluid Panel",
+                "icon": "icon-add"
+            },
+            {
+                "id": "248",
+                "pId": "26",
+                "name": "面板工具",
+                "file": "Panel Tools",
+                "icon": "icon-add"
+            },
+            {
+                "id": "249",
+                "pId": "26",
+                "name": "用户面板工具",
+                "file": "Custom Panel Tools",
+                "icon": "icon-add"
+            },
+            {
+                "id": "250",
+                "pId": "26",
+                "name": "载入面板内容",
+                "file": "Load Panel Content",
+                "icon": "icon-add"
+            },
+            {
+                "id": "251",
+                "pId": "26",
+                "name": "面板尾部",
+                "file": "Panel Footer",
+                "icon": "icon-add"
+            },
+            {
+                "id": "252",
+                "pId": "26",
+                "name": "面板嵌套",
+                "file": "Nested Panel",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "27",
+        "pId": "0",
+        "name": "进度条ProgressBar",
+        "file": "progressbar",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "253",
+                "pId": "27",
+                "name": "基本进度条",
+                "file": "Basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "254",
+                "pId": "27",
+                "name": "流式进度条",
+                "file": "Fluid",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "28",
+        "pId": "0",
+        "name": "属性网格PropertyGrid",
+        "file": "propertygrid",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "255",
+                "pId": "28",
+                "name": "基础数据网络",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "256",
+                "pId": "28",
+                "name": "属性网络的自定义栏目",
+                "file": "customcolumns",
+                "icon": "icon-add"
+            },
+            {
+                "id": "257",
+                "pId": "28",
+                "name": "组格式",
+                "file": "groupformat",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "29",
+        "pId": "0",
+        "name": "可调整大小的Resizable",
+        "file": "resizable",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "258",
+                "pId": "29",
+                "name": "Basic Resizable",
+                "file": "Basic Resizable",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "30",
+        "pId": "0",
+        "name": "搜索框SearchBox",
+        "file": "searchbox",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "259",
+                "pId": "30",
+                "name": "基本搜索框",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "260",
+                "pId": "30",
+                "name": "流式搜索框",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "261",
+                "pId": "30",
+                "name": "搜索框类别",
+                "file": "category",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "31",
+        "pId": "0",
+        "name": "滑块Slider",
+        "file": "slider",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "262",
+                "pId": "31",
+                "name": "基本滑块",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "263",
+                "pId": "31",
+                "name": "流式滑块",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "264",
+                "pId": "31",
+                "name": "提示信息格式",
+                "file": "formattip",
+                "icon": "icon-add"
+            },
+            {
+                "id": "265",
+                "pId": "31",
+                "name": "非直线滑块",
+                "file": "nonlinear",
+                "icon": "icon-add"
+            },
+            {
+                "id": "266",
+                "pId": "31",
+                "name": "区域限制滑块",
+                "file": "range",
+                "icon": "icon-add"
+            },
+            {
+                "id": "267",
+                "pId": "31",
+                "name": "滑块规则",
+                "file": "rule",
+                "icon": "icon-add"
+            },
+            {
+                "id": "268",
+                "pId": "31",
+                "name": "垂直滑块",
+                "file": "vertical",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "32",
+        "pId": "0",
+        "name": "分割按钮SplitButton",
+        "file": "splitbutton",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "269",
+                "pId": "32",
+                "name": "基础分割按钮",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "270",
+                "pId": "32",
+                "name": "分割按钮控制",
+                "file": "actions",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "33",
+        "pId": "0",
+        "name": "滑动开关SwitchButton",
+        "file": "switchbutton",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "271",
+                "pId": "33",
+                "name": "基础滑动开关",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "272",
+                "pId": "33",
+                "name": "滑动开关控制",
+                "file": "actions",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "34",
+        "pId": "0",
+        "name": "选项卡Tabs",
+        "file": "tabs",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "273",
+                "pId": "34",
+                "name": "基础选项卡",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "274",
+                "pId": "34",
+                "name": "流式选项卡",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "275",
+                "pId": "34",
+                "name": "高度自适应选项卡",
+                "file": "autoheight",
+                "icon": "icon-add"
+            },
+            {
+                "id": "276",
+                "pId": "34",
+                "name": "带下拉菜单的选项卡",
+                "file": "dropdown",
+                "icon": "icon-add"
+            },
+            {
+                "id": "277",
+                "pId": "34",
+                "name": "固定选项卡宽度",
+                "file": "fixedwidth",
+                "icon": "icon-add"
+            },
+            {
+                "id": "278",
+                "pId": "34",
+                "name": "选项卡鼠标经过事件",
+                "file": "hover",
+                "icon": "icon-add"
+            },
+            {
+                "id": "279",
+                "pId": "34",
+                "name": "选项卡嵌套",
+                "file": "nestedtabs",
+                "icon": "icon-add"
+            },
+            {
+                "id": "280",
+                "pId": "34",
+                "name": "选项卡工具组",
+                "file": "striptools",
+                "icon": "icon-add"
+            },
+            {
+                "id": "281",
+                "pId": "34",
+                "name": "自定义式样选项卡",
+                "file": "style",
+                "icon": "icon-add"
+            },
+            {
+                "id": "282",
+                "pId": "34",
+                "name": "带图片的选项卡",
+                "file": "tabimage",
+                "icon": "icon-add"
+            },
+            {
+                "id": "283",
+                "pId": "34",
+                "name": "选项卡位置",
+                "file": "tabposition",
+                "icon": "icon-add"
+            },
+            {
+                "id": "284",
+                "pId": "34",
+                "name": "选显卡工具条",
+                "file": "tabstools",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "35",
+        "pId": "0",
+        "name": "文本框TextBox",
+        "file": "textbox",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "285",
+                "pId": "35",
+                "name": "基本文本框",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "286",
+                "pId": "35",
+                "name": "流式文本框",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "287",
+                "pId": "35",
+                "name": "带按钮的文本框",
+                "file": "button",
+                "icon": "icon-add"
+            },
+            {
+                "id": "288",
+                "pId": "35",
+                "name": "带清除图标的文本框",
+                "file": "clearicon",
+                "icon": "icon-add"
+            },
+            {
+                "id": "289",
+                "pId": "35",
+                "name": "带图标的文本框",
+                "file": "custom",
+                "icon": "icon-add"
+            },
+            {
+                "id": "290",
+                "pId": "35",
+                "name": "自定义文本框",
+                "file": "icons",
+                "icon": "icon-add"
+            },
+            {
+                "id": "291",
+                "pId": "35",
+                "name": "多行文本框",
+                "file": "multiline",
+                "icon": "icon-add"
+            },
+            {
+                "id": "292",
+                "pId": "35",
+                "name": "文本框大小",
+                "file": "size",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "36",
+        "pId": "0",
+        "name": "时间微调TimeSpinner",
+        "file": "timespinner",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "293",
+                "pId": "36",
+                "name": "基础时间调整器",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "294",
+                "pId": "36",
+                "name": "流式时间调整器",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "295",
+                "pId": "36",
+                "name": "时间调整器控制",
+                "file": "actions",
+                "icon": "icon-add"
+            },
+            {
+                "id": "296",
+                "pId": "36",
+                "name": "时间范围",
+                "file": "range",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "37",
+        "pId": "0",
+        "name": "工具提示Tooltip",
+        "file": "tooltip",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "297",
+                "pId": "37",
+                "name": "基础工具提示",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "298",
+                "pId": "37",
+                "name": "ajax 工具提示",
+                "file": "ajax",
+                "icon": "icon-add"
+            },
+            {
+                "id": "299",
+                "pId": "37",
+                "name": "自定义提示内容",
+                "file": "customcontent",
+                "icon": "icon-add"
+            },
+            {
+                "id": "300",
+                "pId": "37",
+                "name": "自定义提示样式",
+                "file": "customstyle",
+                "icon": "icon-add"
+            },
+            {
+                "id": "301",
+                "pId": "37",
+                "name": "工具提示的位置",
+                "file": "position",
+                "icon": "icon-add"
+            },
+            {
+                "id": "302",
+                "pId": "37",
+                "name": "提示工具栏",
+                "file": "toolbar",
+                "icon": "icon-add"
+            },
+            {
+                "id": "303",
+                "pId": "37",
+                "name": "工具提示对话框",
+                "file": "tooltipdialog",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "38",
+        "pId": "0",
+        "name": "树Tree",
+        "file": "tree",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "304",
+                "pId": "38",
+                "name": "基础树",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "305",
+                "pId": "38",
+                "name": "树的操作",
+                "file": "actions",
+                "icon": "icon-add"
+            },
+            {
+                "id": "306",
+                "pId": "38",
+                "name": "树动画",
+                "file": "animation",
+                "icon": "icon-add"
+            },
+            {
+                "id": "307",
+                "pId": "38",
+                "name": "复选框的树",
+                "file": "checkbox",
+                "icon": "icon-add"
+            },
+            {
+                "id": "308",
+                "pId": "38",
+                "name": "树的上下文菜单",
+                "file": "contextmenu",
+                "icon": "icon-add"
+            },
+            {
+                "id": "309",
+                "pId": "38",
+                "name": "可拖拉树节点",
+                "file": "dnd",
+                "icon": "icon-add"
+            },
+            {
+                "id": "310",
+                "pId": "38",
+                "name": "可编辑的树",
+                "file": "editable",
+                "icon": "icon-add"
+            },
+            {
+                "id": "311",
+                "pId": "38",
+                "name": "格式化树节点",
+                "file": "formatting",
+                "icon": "icon-add"
+            },
+            {
+                "id": "312",
+                "pId": "38",
+                "name": "树节点的图标",
+                "file": "icons",
+                "icon": "icon-add"
+            },
+            {
+                "id": "313",
+                "pId": "38",
+                "name": "延迟加载树节点",
+                "file": "lazyload",
+                "icon": "icon-add"
+            },
+            {
+                "id": "314",
+                "pId": "38",
+                "name": "树线",
+                "file": "lines",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "39",
+        "pId": "0",
+        "name": "树网络TreeGrid",
+        "file": "treegrid",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "315",
+                "pId": "39",
+                "name": "基础树网络",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "316",
+                "pId": "39",
+                "name": "流式树网络",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "317",
+                "pId": "39",
+                "name": "树网路控制",
+                "file": "actions",
+                "icon": "icon-add"
+            },
+            {
+                "id": "318",
+                "pId": "39",
+                "name": "树表格的客户端分页",
+                "file": "clientpagination",
+                "icon": "icon-add"
+            },
+            {
+                "id": "319",
+                "pId": "39",
+                "name": "树网络的快捷菜单",
+                "file": "contextmenu",
+                "icon": "icon-add"
+            },
+            {
+                "id": "320",
+                "pId": "39",
+                "name": "可编辑树网络",
+                "file": "editable",
+                "icon": "icon-add"
+            },
+            {
+                "id": "321",
+                "pId": "39",
+                "name": "带页脚的树网络",
+                "file": "footer",
+                "icon": "icon-add"
+            },
+            {
+                "id": "322",
+                "pId": "39",
+                "name": "树网络的线",
+                "file": "lines",
+                "icon": "icon-add"
+            },
+            {
+                "id": "323",
+                "pId": "39",
+                "name": "使用树网络作报告",
+                "file": "reports",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "40",
+        "pId": "0",
+        "name": "验证箱ValidateBox",
+        "file": "validatebox",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "324",
+                "pId": "40",
+                "name": "基本验证框",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "325",
+                "pId": "40",
+                "name": "自定义验证框提示",
+                "file": "customtooltip",
+                "icon": "icon-add"
+            },
+            {
+                "id": "326",
+                "pId": "40",
+                "name": "模糊验证",
+                "file": "validateonblur",
+                "icon": "icon-add"
+            }
+        ]
+    },
+    {
+        "id": "41",
+        "pId": "0",
+        "name": "窗口Window",
+        "file": "window",
+        "icon": "icon-add",
+        "children": [
+            {
+                "id": "327",
+                "pId": "41",
+                "name": "基础窗口",
+                "file": "basic",
+                "icon": "icon-add"
+            },
+            {
+                "id": "328",
+                "pId": "41",
+                "name": "流式窗口",
+                "file": "fluid",
+                "icon": "icon-add"
+            },
+            {
+                "id": "329",
+                "pId": "41",
+                "name": "自定义窗口工具",
+                "file": "customtools",
+                "icon": "icon-add"
+            },
+            {
+                "id": "330",
+                "pId": "41",
+                "name": "有底部的窗口",
+                "file": "footer",
+                "icon": "icon-add"
+            },
+            {
+                "id": "331",
+                "pId": "41",
+                "name": "内联窗口",
+                "file": "inlinewindow",
+                "icon": "icon-add"
+            },
+            {
+                "id": "332",
+                "pId": "41",
+                "name": "模态窗口",
+                "file": "modalwindow",
+                "icon": "icon-add"
+            },
+            {
+                "id": "333",
+                "pId": "41",
+                "name": "窗口布局",
+                "file": "windowlayout",
+                "icon": "icon-add"
+            }
+        ]
+    }
+]

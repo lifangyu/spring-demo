@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Fluid Layout - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<script type="text/javascript" src="../jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+	<script type="text/javascript">
+    $(function(){
+        $('#cc').layout();
+        setHeight();
+    });
+    
+    function addItem(){
+        $('#cc').layout('panel','center').append('<p>More Panel Content.</p>');
+        setHeight();
+    }
+    
+    function removeItem(){
+        $('#cc').layout('panel','center').find('p:last').remove();
+        setHeight();
+    }
+    
+    function setHeight(){
+			var c = $('#cc');
+			var p = c.layout('panel','center');	// get the center panel
+			var oldHeight = p.panel('panel').outerHeight();
+			p.panel('resize', {height:'auto'});
+			/*$('#testIframe').attr({ height: 'auto', alt: 'Test Image' });
+			var newHeight = p.panel('panel').outerHeight();
+			c.layout('resize',{
+				height: (c.height() + newHeight - oldHeight)
+			});*/
+</script>
+</head>
+<body id="cc" class="easyui-layout">
+		<div data-options="region:'north',split:true" style="height:45px; background-image:url(bottom_bg.gif)">
+            <h3 style="padding-left:60px;">jQuery EasyUI 1.4.4 Demo</h3>
+        </div>
+		<div data-options="region:'south'" style="height:2px;"></div>
+		<div id="p" data-options="region:'west',split:true" title="模块集合列表" style="width:15%;padding:2px 2px 2px 10px">
+            <a href="accordion/index.html" target="testIframe">accordion</a><br/>
+            <a href="calendar/index.html" target="testIframe">calendar</a><br/>
+            <a href="combo/index.html" target="testIframe">combo</a><br/>
+            <a href="combobox/index.html" target="testIframe">combobox</a><br/>
+            <a href="combogrid/index.html" target="testIframe">combogrid</a><br/>
+            <a href="combotree/index.html" target="testIframe">combotree</a><br/>
+            <a href="datagrid/index.html" target="testIframe">datagrid</a><br/>
+            <a href="datalist/index.html" target="testIframe">datalist</a><br/>
+            <a href="datebox/index.html" target="testIframe">datebox</a><br/>
+            <a href="datetimebox/index.html" target="testIframe">datetimebox</a><br/>
+            <a href="datetimespinner/index.html" target="testIframe">datetimespinner</a><br/>
+            <a href="dialog/index.html" target="testIframe">dialog</a><br/>
+            <a href="draggable/index.html" target="testIframe">draggable</a><br/>
+            <a href="droppable/index.html" target="testIframe">droppable</a><br/>
+            <a href="easyloader/basic.html" target="testIframe">easyloader</a><br/>
+            <a href="filebox/index.html" target="testIframe">filebox</a><br/>
+            <a href="form/index.html" target="testIframe">form</a><br/>
+            <a href="layout/index.html" target="testIframe">layout</a><br/>
+            <a href="linkbutton/index.html" target="testIframe">linkbutton</a><br/>
+            <a href="menu/index.html" target="testIframe">menu</a><br/>
+            <a href="menubutton/index.html" target="testIframe">menubutton</a><br/>
+            <a href="messager/index.html" target="testIframe">messager</a><br/>
+            <a href="numberbox/index.html" target="testIframe">numberbox</a><br/>
+            <a href="numberspinner/index.html" target="testIframe">numberspinner</a><br/>
+            <a href="pagination/index.html" target="testIframe">pagination</a><br/>
+            <a href="panel/index.html" target="testIframe">panel</a><br/>
+            <a href="progressbar/index.html" target="testIframe">progressbar</a><br/>
+            <a href="propertygrid/index.html" target="testIframe">propertygrid</a><br/>
+            <a href="resizable/basic.html" target="testIframe">resizable</a><br/>
+            <a href="searchbox/index.html" target="testIframe">searchbox</a><br/>
+            <a href="slider/index.html" target="testIframe">slider</a><br/>
+            <a href="splitbutton/index.html" target="testIframe">splitbutton</a><br/>
+            <a href="switchbutton/index.html" target="testIframe">switchbutton</a><br/>
+            <a href="tabs/index.html" target="testIframe">tabs</a><br/>
+            <a href="textbox/index.html" target="testIframe">textbox</a><br/>
+            <a href="timespinner/index.html" target="testIframe">timespinner</a><br/>
+            <a href="tooltip/index.html" target="testIframe">tooltip</a><br/>
+            <a href="tree/index.html" target="testIframe">tree</a><br/>
+            <a href="treegrid/index.html" target="testIframe">treegrid</a><br/>
+            <a href="validatebox/index.html" target="testIframe">validatebox</a><br/>
+            <a href="window/index.html" target="testIframe">window</a><br/>
+		</div>
+		<div data-options="region:'center',iconCls:'icon-ok'" title="示例展现">
+            <iframe marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height=100% id="testIframe" name="testIframe" onLoad="iFrameHeight()" src="accordion/index.html"></iframe>
+
+<script type="text/javascript" language="javascript">
+
+    function iFrameHeight() {
+
+        var ifm= document.getElementById("testIframe");
+
+        var subWeb = document.frames ? document.frames["testIframe"].document :ifm.contentDocument;
+
+            if(ifm != null && subWeb != null) {
+
+            ifm.height = subWeb.body.scrollHeight;
+
+            }
+
+    }
+</script>
+		</div>
+</body>
+</html>

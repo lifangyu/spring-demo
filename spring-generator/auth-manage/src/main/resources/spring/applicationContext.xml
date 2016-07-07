@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jee="http://www.springframework.org/schema/jee" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-3.2.xsd 
+	http://www.springframework.org/schema/jee 
+	http://www.springframework.org/schema/jee/spring-jee-3.2.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd
+	http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+
+	<!-- properties 属性配置加载 -->
+	<context:property-placeholder location="classpath:*.properties" />
+
+	<!-- DB数据配置管理
+	<import resource="classpath:spring/applicationContext-datasource.xml" /> -->
+	<import resource="classpath:spring/applicationContext-mybatis.xml" />
+
+	<!-- shiro 权限配置 
+	<import resource="classpath:applicationContext-shiro.xml"/>
+	-->
+	<!-- Hessian客户端配置 -->
+	<!-- <import resource="classpath:applicationContext-client.xml" /> -->
+	
+	<!-- dubbo配置
+	<import resource="classpath:applicationContext-consumer.xml" />
+	 -->
+	<!-- resid 配置
+ 	<import resource="classpath:applicationContext-redis.xml"/>
+ 	 -->
+
+</beans>
