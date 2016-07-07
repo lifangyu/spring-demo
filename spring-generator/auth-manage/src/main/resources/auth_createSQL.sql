@@ -16,7 +16,7 @@ create table auth_user
    mobile             varchar(12) comment '手机',
    email              varchar(30) comment '邮箱',
    qq                 varchar(30) comment 'QQ',
-   status             char(1) default 1 comment '是否有效[1有效,0无效]',
+   status             int(1) default 1 comment '是否有效[1有效,0无效]',
    dept_id            bigint(20)  comment '部门ID',
    create_date        timestamp default current_timestamp comment '创建时间',
    update_date        datetime default NULL comment '最后一次更新时间',
@@ -42,7 +42,7 @@ create table auth_rule
    id                 bigint(20) NOT NULL AUTO_INCREMENT comment '主键',
    rule_name          varchar(30) comment '中文角色名',
    en_name            varchar(30) comment '英文角色名',
-   status             char(1) default 1 comment '是否有效[1有效,0无效]',
+   status             int(1) default 1 comment '是否有效[1有效,0无效]',
    create_date        timestamp default current_timestamp comment '创建时间',
    update_date        datetime default NULL comment '最后一次更新时间',
    primary key (id),
@@ -84,6 +84,7 @@ DROP TABLE IF EXISTS auth_function;
 create table auth_function
 (
    id                 bigint(20) NOT NULL AUTO_INCREMENT comment '主键',
+   function_nemu_id   bigint(20) NOT NULL comment '菜单主键',
    function_module    varchar(50) comment '功能模块',
    function_type      varchar(20) comment '功能类型[save-保存/新增;view;edit-编辑/修改;delete-删除;submit-提交;return-返回;export-导出;config-配置]',
    function_url       varchar(100) comment '功能url',
@@ -142,5 +143,36 @@ create table auth_dept
    INDEX index_dept_name (dept_name) ,
    INDEX index_create_date (create_date) 
 )ENGINE = InnoDB DEFAULT CHARSET=utf8 comment '部门表';
+
+
+
+/*=============================
+ * tabble auth_menu 菜单表
+ *  一个菜单下有多个 功能，一个功能只能在一个菜单下
+ * =============================
+ */
+
+DROP TABLE IF EXISTS auth_menu;
+create table auth_menu
+(
+   id                 bigint(20) NOT NULL AUTO_INCREMENT comment '主键',
+   menu_name          varchar(30) comment '菜单名称',
+   menu_url           varchar(255) comment '菜单url',
+   icon_url           varchar(255) comment '菜单图标url',
+   parent_id          bigint(20) default 0 comment '上级菜单ID (如果是根菜单则为 0)',
+   folder             int(1) default 1 comment '是否文件夹[1是，0不是]',
+   status             int(1) default 1 comment '状态 [1有效,0无效]',
+   sort               int(1) default 1 comment '排序序列',
+   create_date        timestamp default current_timestamp comment '创建时间',
+   update_date        datetime default NULL comment '最后一次更新时间',
+   primary key (id),
+   UNIQUE key unique_pid_sort (parent_id,sort), -- # 部门唯一性
+   INDEX index_menu_name (menu_name) ,
+   INDEX index_create_date (create_date) 
+)ENGINE = InnoDB DEFAULT CHARSET=utf8 comment '菜单表';
+
+
+
+
 
 
