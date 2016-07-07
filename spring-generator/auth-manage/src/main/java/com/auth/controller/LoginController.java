@@ -35,7 +35,6 @@ import com.spring.common.utils.image.ImageUtils;
  * @version V1.0
  */
 @Controller
-@RequestMapping(value = "login")
 public class LoginController {
 
     @Autowired
@@ -88,7 +87,7 @@ public class LoginController {
      * 系统首页
      * @throws IOException 
      */
-    @RequestMapping(value = "main", method = RequestMethod.GET)
+    @RequestMapping(value = "login", method = RequestMethod.GET)
     public String sysMain() throws IOException {
         // 进入pages/main.jsp页面
         return "main";
@@ -164,14 +163,14 @@ public class LoginController {
                     if (authMenuChiled.getFolder() == 1) {
                         // 二级菜单下的子菜单(三级菜单)
                         sec.setChildren(this.getMenuJsonObjectSec(userId, authMenuChiled));
+                    } else {
+                        sec.setFile(authMenuChiled.getMenuUrl());
                     }
                     nodeChileList.add(sec);
                 }
                 node.setChildren(nodeChileList);
             } else {
-                nodeList.add(new ZTreeNode(String.valueOf(authMenu.getId()), String.valueOf(authMenu.getParentId()),
-                        authMenu.getMenuName(), authMenu.getFolder() == 1 ? "true" : "false", authMenu.getIconUrl(),
-                        authMenu.getSort()));
+                node.setFile(authMenu.getMenuUrl());
             }
             nodeList.add(node);
         }
@@ -202,6 +201,8 @@ public class LoginController {
             if (authMenuThird.getFolder() == 1) {
                 // 三级菜单对象下的子菜单(以此递归)
                 third.setChildren(this.getMenuJsonObjectSec(userId, authMenuThird));
+            } else {
+                third.setFile(authMenuThird.getMenuUrl());
             }
             nodeList.add(third);
         }
