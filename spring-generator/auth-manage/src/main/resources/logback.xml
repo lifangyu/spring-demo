@@ -12,7 +12,7 @@
 	</appender>
 	
 	<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>C:\\logs\\auth.log</file>
+		<file>logs/auth.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>logs/auth.log.%d{yyyy-MM-dd}.log</fileNamePattern>
 		</rollingPolicy>
@@ -22,7 +22,7 @@
 	</appender>
 	
 	<appender name="aopLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>C:\\logs\\auth_aop_log.log</file>
+		<file>logs/auth_aop_log.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>logs/auth_aop_log.%d{yyyy-MM-dd}.log</fileNamePattern>
 			<maxHistory>30</maxHistory>

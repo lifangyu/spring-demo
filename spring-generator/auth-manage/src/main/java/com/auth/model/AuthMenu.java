@@ -2,7 +2,13 @@ package com.auth.model;
 
 import java.util.Date;
 
+/**
+ * 菜单表Auth_Menu
+ * @author lifangyu
+ * @version V1.0
+ */
 public class AuthMenu {
+
     private Long id;
 
     private String menuName;
@@ -15,7 +21,7 @@ public class AuthMenu {
 
     private Integer folder;
 
-    private String status;
+    private Integer status;
 
     private Integer sort;
 
@@ -71,12 +77,12 @@ public class AuthMenu {
         this.folder = folder;
     }
 
-    public String getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public Integer getSort() {
