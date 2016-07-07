@@ -3,7 +3,6 @@ package com.auth.model;
 import java.util.Date;
 
 /**
- * 
  * auth_user 对应的bean
  * @author lifangyu
  * @version V1.0
@@ -18,7 +17,7 @@ public class AuthUser {
     private String mobile;// 手机
     private String email;// 邮箱
     private String qq;// qq
-    private String status;// 是否有效[1有效,0无效]
+    private Integer status;// 是否有效[1有效,0无效]
     private Long deptId;// 部门id
     private Date createDate;// 创建时间
     private Date updateDate;// 最后一次更新时间
@@ -87,12 +86,12 @@ public class AuthUser {
         this.qq = qq == null ? null : qq.trim();
     }
 
-    public String getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public Long getDeptId() {
