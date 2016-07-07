@@ -4,8 +4,8 @@
 <head id="Head1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>管理系统</title>
-    <%@include file="/pages/common/global.jsp"%>
-    <script type="text/javascript" src="<%=request.getContextPath() %>/static/easyui/menuStandardData.js"></script>
+    <%@include file="common/global.jsp"%>
+    <script type="text/javascript" src="${ctx }/static/easyui/menuStandardData.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath() %>/static/js/leftMenu.js"></script>
 
 </head>
@@ -16,10 +16,10 @@
 </div></noscript>
 	<!-- head 部 -->
     <div region="north" split="false" border="false" style="overflow: hidden; height: 30px;
-        background: url(../static/images/layout-browser-hd-bg.gif) #7f99be repeat-x center 50%;
+        background: url(static/images/layout-browser-hd-bg.gif) #7f99be repeat-x center 50%;
         line-height: 20px;color: #fff; font-family: Verdana, 微软雅黑,黑体">
         <span style="float:right; padding-right:20px;" class="head">欢迎 admin <a href="#" class="easyui-linkbutton" onClick="load2()">修改密码</a> <a href="#" class="easyui-linkbutton" onClick="load2()">安全退出</a></span>
-        <span style="padding-left:10px; font-size: 16px; "><img src="../static/images/blocks.gif" width="20" height="20" align="absmiddle" /> jQuery.EasyUI- 1.4.4 + zTree3.5.19 完美结合 应用实例</span>
+        <span style="padding-left:10px; font-size: 16px; "><img src="static/images/blocks.gif" width="20" height="20" align="absmiddle" /> jQuery.EasyUI- 1.4.4 + zTree3.5.19 完美结合 应用实例</span>
     </div>
     
     <!-- foot 底部 -->

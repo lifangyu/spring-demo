@@ -39,7 +39,7 @@ html,body,.container {
 			alert("请输入验证码！");
 			return;
 		}
-		$.post("${ctx}login/checkLogin", 
+		$.post("${ctx}checkLogin", 
 			$("#myform").serialize(), 
 			function(data) {
 				if (data == 1) {
@@ -56,7 +56,7 @@ html,body,.container {
 					change_image();
 				} else if (data == 0) {
 					// 登录成功，跳转
-					location.href = "${ctx}login/main";
+					location.href = "${ctx}login";
 				} else {
 					//$("#image_msg").text("验证码错误.");
 					alert("验证码错误");
@@ -66,7 +66,7 @@ html,body,.container {
 	}
 	//刷新验证码图片
 	function change_image() {
-		$("#image_code").attr("src","${ctx }login/createImage?date=" + new Date().getTime());
+		$("#image_code").attr("src","${ctx }createImage?date=" + new Date().getTime());
 	}
 	//回车事件
 	document.onkeydown = function(event) {
@@ -104,7 +104,7 @@ html,body,.container {
 					<div class="pic clearfix">
 						<input id="code" type="text" class="txt check" name="code"
 							placeholder="图片验证码"><img id="image_code"
-							src="${ctx }login/createImage" onclick="change_image();" />
+							src="${ctx }createImage" onclick="change_image();" />
 					</div>
 					<p class="little_text">看不清？请点击图片刷新验证码</p>
 					<a href="javascript:;"> <input type="button" id="loginbutton"
