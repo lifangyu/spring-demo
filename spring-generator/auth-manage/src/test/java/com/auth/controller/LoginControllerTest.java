@@ -13,16 +13,17 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
  * @author lifangyu
  * @version V1.0
  */
+// @Ignore
 public class LoginControllerTest extends BaseControllerTest {
 
     @Test
     public void getDriefingDatas() throws Exception {
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.post("/login/createImage");
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.post("/checkLogin");
 		ResultActions result = this.mockMvc.perform(request);
         result.andExpect(MockMvcResultMatchers.status().isOk());
 		MvcResult andReturn = result.andReturn();
 		andReturn.getModelAndView();
-		System.err.println("返回数据为:" + andReturn.getResponse().getContentAsString());
+        logger.info("返回数据为:" + andReturn.getResponse().getContentAsString());
 	}
 
 }

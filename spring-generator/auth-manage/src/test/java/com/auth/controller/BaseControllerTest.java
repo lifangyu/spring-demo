@@ -4,6 +4,7 @@ package com.auth.controller;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,7 @@ import junit.framework.TestCase;
 @WebAppConfiguration
 @ContextConfiguration(locations = { "classpath:spring/applicationContext.xml", "classpath:spring/spring-mvc.xml" })
 public class BaseControllerTest extends TestCase {
+
 	protected Logger logger = LoggerFactory.getLogger(BaseControllerTest.class);
 
 	@Autowired
@@ -31,5 +33,10 @@ public class BaseControllerTest extends TestCase {
 	public void setup() {
 		this.mockMvc = webAppContextSetup(this.wac).build();
 	}
+
+    @Test
+    public void test() {
+        logger.info("==============================");
+    }
 
 }
