@@ -66,7 +66,7 @@
 	</div>
     <!-- foot 底部 -->
     <div region="south" split="false" style="height: 30px; background: #D2E0F2; ">
-        <div class="footer">lify版权所有</div>
+        <div class="footer">Copyright © 2016-2018, lify All Rights Reserve.</div>
     </div>
 </body>
 </html>
