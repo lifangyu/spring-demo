@@ -22,11 +22,6 @@
         <span style="padding-left:10px; font-size: 16px; "><img src="static/images/blocks.gif" width="20" height="20" align="absmiddle" /> jQuery.EasyUI- 1.4.4 + zTree3.5.19 完美结合 应用实例</span>
     </div>
     
-    <!-- foot 底部 -->
-    <div region="south" split="false" style="height: 30px; background: #D2E0F2; ">
-        <div class="footer">lify版权所有</div>
-    </div>
-    
     <!-- 左侧菜单 -->
     <div region="west" split="true" title="导航菜单" style="width:180px;" id="west">
 		<div class="easyui-accordion" style="width: 200px; height: 300px;" fit=true border=false>
@@ -46,10 +41,13 @@
     <div id="mainPanle" region="center" style="background:#eee;overflow-y:hidden">
         <div id="tabs" class="easyui-tabs"  fit="true" border="false">
 			<div title="首页" style="padding:20px;overflow:hidden;color:red;" >
-				<h1 style="font-size:24px;">* Edit By CYY</h1>
+                <h1 style="font-size:24px;">&nbsp;</h1>
+                <h1 style="font-size:24px;">&nbsp;</h1>
+				<h1 style="font-size:24px;">* Edit By lify</h1>
                 <h1 style="font-size:24px;">* jQuery.EasyUI- 1.4.4 + zTree3.5.19 完美结合 应用实例 </h1>
                 <h1 style="font-size:24px;">* </h1>
 				<h1 style="font-size:24px;">* 2016-06-06</h1>
+				<h1 style="font-size:24px;">&nbsp;</h1>
 			</div>
 		</div>
     </div>
@@ -66,6 +64,9 @@
 		<div class="menu-sep"></div>
 		<div id="exit">退出</div>
 	</div>
-
+    <!-- foot 底部 -->
+    <div region="south" split="false" style="height: 30px; background: #D2E0F2; ">
+        <div class="footer">lify版权所有</div>
+    </div>
 </body>
 </html>
