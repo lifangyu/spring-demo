@@ -145,7 +145,7 @@ public class LoginController {
         List<ZTreeNode> nodeList = new ArrayList<>();// 菜单跟目录集合
         for (Iterator<AuthMenu> iterator = menus.iterator(); iterator.hasNext();) {
             AuthMenu authMenu = (AuthMenu) iterator.next();
-            // 一级菜单对象
+            // 一级菜单对象( 一级菜单展开，二级三级等菜单不展开)
             ZTreeNode node = new ZTreeNode(String.valueOf(authMenu.getId()), String.valueOf(authMenu.getParentId()),
                     authMenu.getMenuName(), authMenu.getFolder() == 1 ? "true" : "false", authMenu.getIconUrl(),
                     authMenu.getSort());
@@ -157,8 +157,8 @@ public class LoginController {
                     AuthMenu authMenuChiled = (AuthMenu) iteratorsec.next();
                     // 一级菜单下的子菜单对象(二级菜单)
                     ZTreeNode sec = new ZTreeNode(String.valueOf(authMenuChiled.getId()),
-                            String.valueOf(authMenuChiled.getParentId()), authMenuChiled.getMenuName(),
-                            authMenuChiled.getFolder() == 1 ? "true" : "false", authMenuChiled.getIconUrl(),
+                            String.valueOf(authMenuChiled.getParentId()), authMenuChiled.getMenuName(), "false",
+                            authMenuChiled.getIconUrl(),
                             authMenuChiled.getSort());
                     if (authMenuChiled.getFolder() == 1) {
                         // 二级菜单下的子菜单(三级菜单)
@@ -195,8 +195,8 @@ public class LoginController {
             AuthMenu authMenuThird = (AuthMenu) iterators.next();
             // 三级菜单对象
             ZTreeNode third = new ZTreeNode(String.valueOf(authMenuThird.getId()),
-                    String.valueOf(authMenuThird.getParentId()), authMenuThird.getMenuName(),
-                    authMenuThird.getFolder() == 1 ? "true" : "false", authMenuThird.getIconUrl(),
+                    String.valueOf(authMenuThird.getParentId()), authMenuThird.getMenuName(), "false",
+                    authMenuThird.getIconUrl(),
                     authMenuThird.getSort());
             if (authMenuThird.getFolder() == 1) {
                 // 三级菜单对象下的子菜单(以此递归)
