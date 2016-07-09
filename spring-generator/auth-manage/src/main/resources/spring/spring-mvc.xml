@@ -51,7 +51,7 @@
 		</property>
 	</bean>
 	<!-- =================================================================================================== -->
-	<!-- jsp 视图解析配置 方式一  start -->
+	<!-- jsp 视图解析配置 方式一  start(经测试可用) -->
 	<!-- 
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
