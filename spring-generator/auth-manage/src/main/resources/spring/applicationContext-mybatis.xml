@@ -69,8 +69,9 @@
 	<!-- 使用annotation定义事务 -->
 	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
 	
-	<aop:config>  
-        <aop:advisor pointcut="execution(* com.auth..service.*Service.*(..))" advice-ref="txAdvice"/>  
+	<!-- 通过声名式统一管理事务(service 包或子包下所有依Service结尾class的所有方法) -->
+	<aop:config>
+        <aop:advisor pointcut="execution(* com.auth..service..*Service.*(..))" advice-ref="txAdvice"/>  
     </aop:config>
     
      <tx:advice id="txAdvice" transaction-manager="transactionManager">  
