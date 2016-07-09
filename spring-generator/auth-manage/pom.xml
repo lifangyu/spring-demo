@@ -80,7 +80,8 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-			<scope>provided</scope>
+			<!-- 不可使用 编译时使用，因为在运行的时候会报错，找不到jar(需要手动把jstl.jar 放到tomcat下lib目录中才能运行) -->
+			<!-- <scope>provided</scope> -->
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
@@ -451,8 +452,8 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<configuration>
-						<source>${jdk.version}</source>
-						<target>${jdk.version}</target>
+						<source>1.7</source>
+						<target>1.7</target>
 						<!--解决Swagger中文乱码问题 -->
 						<encoding>UTF-8</encoding>
 						<showWarnings>true</showWarnings>
