@@ -7,7 +7,7 @@
   	<version>1.0</version>
   	<relativePath>../spring-parent/pom.xml</relativePath>
   </parent>
-  <groupId>com.spring.demo</groupId>
+  <!-- <groupId>com.spring.demo</groupId> -->
   <artifactId>spring-web</artifactId>
   <packaging>war</packaging>
   <name>spring-web</name>
@@ -18,21 +18,19 @@
 		<sonar.host.url>http://jenkins.puhuitech.cn:9000/</sonar.host.url>
 		<sonar.sources>src/main</sonar.sources>
 		 -->
-		
 	</properties>
 	
 	<dependencies>
-
-		<!-- <dependency>
+		<!-- spring boot start -->
+		<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-tomcat</artifactId>
 		</dependency>
 		<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-web</artifactId>
-		</dependency> -->
-		
-		<!-- spring mvc start -->
+		</dependency>
+		<!-- spring web start -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -81,11 +79,11 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 		</dependency>
+		<!-- spring 单元测试 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 		</dependency>
-		<!-- spring 单元测试 -->
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
