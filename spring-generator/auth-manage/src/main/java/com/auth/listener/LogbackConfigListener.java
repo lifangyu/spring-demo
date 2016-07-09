@@ -41,8 +41,8 @@ public class LogbackConfigListener implements ServletContextListener {
      */
     @Override
     public void contextDestroyed(ServletContextEvent event) {
+        context.log("Closing logBack WebApplicationContext destroyed");
         this.context = null;
-        context.log("logBack context destroyed!");
     }
 
     /*
