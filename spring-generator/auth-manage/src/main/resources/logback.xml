@@ -12,7 +12,7 @@
 	</appender>
 	
 	<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>logs/auth.log</file>
+		<file>C:\fangdai\application\github\springdemo\spring-generator\auth-manage\logs/auth.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>logs/auth.log.%d{yyyy-MM-dd}.log</fileNamePattern>
 		</rollingPolicy>
@@ -22,7 +22,7 @@
 	</appender>
 	
 	<appender name="aopLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>logs/auth_aop_log.log</file>
+		<file>C:\fangdai\application\github\springdemo\spring-generator\auth-manage\logs/auth_aop_log.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>logs/auth_aop_log.%d{yyyy-MM-dd}.log</fileNamePattern>
 			<maxHistory>30</maxHistory>
@@ -40,20 +40,18 @@
 		<appender-ref ref="console" />
 		<appender-ref ref="rollingFile" />
 	</root>
-
-	<!-- 下面配置一些第三方包的日志过滤级别，用于避免刷屏 -->
-	<logger name="org.hibernate" level="INFO" />
-	<logger name="org.mybatis" level="INFO" />
-	<logger name="org.springframework" level="INFO" />
-	<logger name="com.opensymphony" level="WARN" />
-	<logger name="org.apache" level="INFO" />
-	<logger name="org.jasig.cas" level="ERROR" />
-	<logger name="java.sql" level="INFO" />
-	<!-- 自定义某些日志输出到独立的文件 -->
-	<!-- 	
-	<logger name="com.puhui.decision.aspect.DecisionSystemLogAspect" additivity="false">
+	<!-- 自定义切面日志日志输出到独立的文件 -->
+	<logger name="com.auth.aspect.SystemLogAspect" additivity="false">
 		<level value="INFO" />
 		<appender-ref ref="aopLogFile" />
-	</logger> 
-	-->
+		<appender-ref ref="console" />
+	</logger>
+	 
+	<!-- 下面配置一些第三方包的日志过滤级别，用于避免刷屏 -->
+	<logger name="org.apache" level="INFO" />
+	<logger name="org.springframework" level="INFO" />
+	<logger name="org.hibernate" level="INFO" />
+	<logger name="org.mybatis" level="INFO" />
+	<!-- 显示执行的SQL -->
+	<logger name="com.auth.dao" level="DEBUG"/>
 </configuration>

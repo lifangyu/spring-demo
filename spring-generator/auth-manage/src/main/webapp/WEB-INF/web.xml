@@ -22,6 +22,16 @@
         classpath:spring/applicationContext.xml
     </param-value>
   </context-param>
+  <!-- logback 自定义配置文件路径[默认路径是resources根目录下]  start  -->
+     <context-param>
+	     <param-name>logbackConfigLocation</param-name>  
+	     <param-value>classpath:logback.xml</param-value>
+	 </context-param>
+	 <listener>
+		<listener-class>com.auth.listener.LogbackConfigListener</listener-class>
+	 </listener>  
+	<!-- logback 自定义配置文件路径  end -->
+  
   <listener>
     <description>springListener</description>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
