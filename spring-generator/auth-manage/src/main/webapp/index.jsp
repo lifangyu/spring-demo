@@ -54,14 +54,15 @@ html,body,.container {
 					//$("#password_result").text("密码错误");
 					alert("帐号被冻结，请联系管理员.");
 					change_image();
-				} else if (data == 0) {
-					// 登录成功，跳转
-					location.href = "${ctx}login";
-				} else {
+				} else if (data == 1) {
 					//$("#image_msg").text("验证码错误.");
 					alert("验证码错误");
 					change_image();
+				} else {
+					// 登录成功，跳转
+					document.getElementById("myform").submit();
 				}
+				return false;// 验证失败不跳转
 		});
 	}
 	//刷新验证码图片
@@ -86,10 +87,10 @@ html,body,.container {
 		</div>
 		<div class="banner">
 			<div class="banner_right">
-				<form id="myform" action="">
+				<form id="myform" action="${ctx}login" method="post">
 					<div class="clearfix">
 						<h3>登录</h3>
-						<a href="${ctx}toFindPassword" class="forget">忘记密码？</a>
+						
 					</div>
 					<div class="user_form">
 						<div class="username border">
@@ -98,7 +99,7 @@ html,body,.container {
 						</div>
 						<div class="username">
 							<input id="password" type="password" placeholder="密码"
-								name="pass" value="" class="txt icon2" />
+								name="password" value="" class="txt icon2" />
 						</div>
 					</div>
 					<div class="pic clearfix">
@@ -107,6 +108,10 @@ html,body,.container {
 							src="${ctx }createImage" onclick="change_image();" />
 					</div>
 					<p class="little_text">看不清？请点击图片刷新验证码</p>
+					<p class="little_text" style="color: red;line-height: 32px">
+						<input type="checkbox" name="rememberMe" value="1">记住密码
+						<a href="${ctx}toFindPassword" style="color: red;margin-left: 50px;">忘记密码？</a>
+					</p>
 					<a href="javascript:;"> <input type="button" id="loginbutton"
 						value="登录" class="btn" /> </a>
 				</form>
