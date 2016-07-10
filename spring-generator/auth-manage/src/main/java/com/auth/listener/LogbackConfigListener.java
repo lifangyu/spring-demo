@@ -31,8 +31,6 @@ public class LogbackConfigListener implements ServletContextListener {
 
     private static final String CONFIG_LOCATION = "logbackConfigLocation";
 
-    private ServletContext context = null;
-
     /*
      * (non-Javadoc)
      * 
@@ -41,8 +39,8 @@ public class LogbackConfigListener implements ServletContextListener {
      */
     @Override
     public void contextDestroyed(ServletContextEvent event) {
+        ServletContext context = event.getServletContext();
         context.log("Closing logBack WebApplicationContext destroyed");
-        this.context = null;
     }
 
     /*
@@ -55,7 +53,7 @@ public class LogbackConfigListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent event) {
 
-        this.context = event.getServletContext();
+        ServletContext context = event.getServletContext();
 
         // Only perform custom log4j initialization in case of a config file.
         String location = context.getInitParameter(CONFIG_LOCATION);
