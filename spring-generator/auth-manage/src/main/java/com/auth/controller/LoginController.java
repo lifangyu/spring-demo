@@ -20,8 +20,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.auth.annotation.SystemLogAnnotation;
 import com.auth.controller.service.LoginService;
 import com.auth.controller.service.MenuService;
+import com.auth.enums.SystemLogTypeEnum;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.common.utils.entity.ZTreeNode;
@@ -36,6 +38,7 @@ import com.spring.common.utils.image.ImageUtils;
 @Controller
 public class LoginController {
 
+    @SuppressWarnings("unused")
     @Autowired
     private LoginService loginService;
     @Autowired
@@ -73,7 +76,8 @@ public class LoginController {
      */
     @RequestMapping(value = "checkLogin", method = RequestMethod.POST)
     @ResponseBody
-    public int checkLogin(String username, String code, String pass, HttpSession session) throws IOException {
+    @SystemLogAnnotation(message = "验证登录", systemLogTypeEnum = SystemLogTypeEnum.MENU, SerialParam = false, SerialReturnValue = false)
+    public int checkLogin(String username, String code, String password,String rememberMe, HttpSession session) throws IOException {
         // 验证验证码
         String imageCode = (String) session.getAttribute("imageCode");
         if (code == null || !code.equalsIgnoreCase(imageCode)) {
@@ -88,7 +92,7 @@ public class LoginController {
      * 系统首页
      * @throws IOException 
      */
-    @RequestMapping(value = "login", method = RequestMethod.GET)
+    @RequestMapping(value = { "login", "main" }, method = RequestMethod.POST)
     public String sysMain() throws IOException {
         // 进入pages/main.jsp页面
         return "main";
