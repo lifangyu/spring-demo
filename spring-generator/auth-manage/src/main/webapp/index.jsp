@@ -50,11 +50,11 @@ html,body,.container {
 					//$("#password_result").text("密码错误");
 					alert("密码错误");
 					change_image();
-				} else if (data == 4) {
+				} else if (data == 3) {
 					//$("#password_result").text("密码错误");
 					alert("帐号被冻结，请联系管理员.");
 					change_image();
-				} else if (data == 1) {
+				} else if (data == 4) {
 					//$("#image_msg").text("验证码错误.");
 					alert("验证码错误");
 					change_image();
