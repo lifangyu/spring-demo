@@ -23,7 +23,7 @@ public class LoginControllerTest extends BaseControllerTest {
         result.andExpect(MockMvcResultMatchers.status().isOk());
 		MvcResult andReturn = result.andReturn();
 		andReturn.getModelAndView();
-        logger.info("返回数据为:" + andReturn.getResponse().getContentAsString());
+        logger.info("return datas:" + andReturn.getResponse().getContentAsString());
 	}
 
 }

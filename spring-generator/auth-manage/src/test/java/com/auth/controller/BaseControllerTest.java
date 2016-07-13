@@ -3,6 +3,7 @@ package com.auth.controller;
 
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +23,7 @@ import junit.framework.TestCase;
 @ContextConfiguration(locations = { "classpath:spring/applicationContext.xml", "classpath:spring/spring-mvc.xml" })
 public class BaseControllerTest extends TestCase {
 
-	protected Logger logger = LoggerFactory.getLogger(BaseControllerTest.class);
+    protected Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private WebApplicationContext wac;
@@ -32,11 +33,17 @@ public class BaseControllerTest extends TestCase {
 	@Before
 	public void setup() {
 		this.mockMvc = webAppContextSetup(this.wac).build();
+        logger.info("==============junit mock test start================");
 	}
+
+    @After
+    public void destroy() {
+        logger.info("==============junit mock test end ================");
+    }
 
     @Test
     public void test() {
-        logger.info("==============================");
+        logger.info("==================================================");
     }
 
 }

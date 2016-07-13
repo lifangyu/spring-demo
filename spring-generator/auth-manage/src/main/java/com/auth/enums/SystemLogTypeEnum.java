@@ -13,7 +13,11 @@ package com.auth.enums;
  */
 public enum SystemLogTypeEnum {
 
+    LOGIN("LOGIN", "登录"),
+
     MENU("MENU", "菜单"),
+
+    SHIRO("SHIRO", "认证"),
 
     OTHER("OTHER", "其它");
 

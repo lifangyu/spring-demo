@@ -32,8 +32,6 @@
 		</encoder>
 	</appender>
 
-	<!-- project default level -->
-	<logger name="com.auth" level="INFO" />
 
 	<!-- root -->
 	<root level="WARN">
@@ -54,4 +52,10 @@
 	<logger name="org.mybatis" level="INFO" />
 	<!-- 显示执行的SQL -->
 	<logger name="com.auth.dao" level="DEBUG"/>
+	
+	<!-- project default level -->
+	<logger name="com.auth" level="INFO" />
+	<logger name="com.auth.shiro" level="TRACE" />
+	<logger name="org.apache.shiro" level="TRACE" />
+	
 </configuration>

@@ -23,7 +23,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.auth.annotation.SystemLogAnnotation;
 import com.auth.controller.service.LoginService;
 import com.auth.controller.service.MenuService;
+import com.auth.controller.service.UserService;
 import com.auth.enums.SystemLogTypeEnum;
+import com.auth.model.AuthUser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.common.utils.entity.ZTreeNode;
@@ -43,6 +45,8 @@ public class LoginController {
     private LoginService loginService;
     @Autowired
     private MenuService menuService;
+    @Autowired
+    private UserService userService;
 	
 	/**
 	 * 生成验证码图片
@@ -78,7 +82,19 @@ public class LoginController {
     @ResponseBody
     @SystemLogAnnotation(message = "验证登录", systemLogTypeEnum = SystemLogTypeEnum.MENU, SerialParam = false, SerialReturnValue = false)
     public int checkLogin(String username, String code, String password,String rememberMe, HttpSession session) throws IOException {
-        // 验证验证码
+        AuthUser user = userService.findUserByUserName(username);
+        if (user == null || user.getId() <= 0) {
+            // 用户名不存在
+            return 1;
+        }
+        if (user.getPassword().equals(password)) {
+            // 用户密码错误
+            return 2;
+        }
+        if (user != null && user.getStatus() == 0) {
+            // 用户无效
+            return 3;
+        }
         String imageCode = (String) session.getAttribute("imageCode");
         if (code == null || !code.equalsIgnoreCase(imageCode)) {
             // 验证码输入有误
@@ -95,6 +111,8 @@ public class LoginController {
     @RequestMapping(value = { "login", "main" }, method = RequestMethod.POST)
     public String sysMain() throws IOException {
         // 进入pages/main.jsp页面
+        // 记住密码处理
+
         return "main";
     }
 

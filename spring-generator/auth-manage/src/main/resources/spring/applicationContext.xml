@@ -24,9 +24,6 @@
 	<import resource="classpath:spring/applicationContext-datasource.xml" /> -->
 	<import resource="classpath:spring/applicationContext-mybatis.xml" />
 
-	<!-- shiro 权限配置 
-	<import resource="classpath:applicationContext-shiro.xml"/>
-	-->
 	<!-- Hessian客户端配置 -->
 	<!-- <import resource="classpath:applicationContext-client.xml" /> -->
 	
@@ -36,5 +33,9 @@
 	<!-- resid 配置
  	<import resource="classpath:applicationContext-redis.xml"/>
  	 -->
+	
+ 	 <!-- shiro 权限配置  -->
+	<import resource="classpath:spring/applicationContext-shiro.xml"/>
+
 
 </beans>

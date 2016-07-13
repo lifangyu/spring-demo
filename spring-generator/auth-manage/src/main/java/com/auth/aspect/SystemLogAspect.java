@@ -130,7 +130,7 @@ public class SystemLogAspect {
         } else {
             if (params != null) {
                 for (Object param : params) {
-                    jsonParams += jsonParams.equals("") ? "[" + param.toString() : "|" + param.toString();
+                    jsonParams += jsonParams.equals("") ? "[" + (param==null?"null":param.toString()) : "|" + (param==null?"null": param.toString());
                 }
                 jsonParams += "]";
             }

@@ -14,4 +14,14 @@ public interface AuthUserMapper {
     int updateByPrimaryKeySelective(AuthUser record);
 
     int updateByPrimaryKey(AuthUser record);
+
+    /**
+     * 用户名查询用户对象
+     *
+     * @author lifangyu
+     * @param userName
+     * @return
+     * 		AuthUser
+     */
+    AuthUser selectByUserName(String userName);
 }
