@@ -63,7 +63,7 @@ public class ShiroRealm extends AuthorizingRealm {
      */ 
     public ShiroRealm() {
         super();
-        logger.info("ShiroRealm init start...");
+        // logger.info("ShiroRealm init start...");
         HashedCredentialsMatcher matcher = new HashedCredentialsMatcher(ALGORITHM);
         matcher.setHashIterations(INTERATIONS);
         setCredentialsMatcher(matcher);
