@@ -42,8 +42,8 @@ public class BaseControllerTest extends TestCase {
     }
 
     @Test
-    public void test() {
-        logger.info("==================================================");
+    public void controllerTest() {
+        logger.info("==============BaseControllerTest==================");
     }
 
 }
