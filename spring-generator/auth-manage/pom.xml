@@ -277,6 +277,12 @@
 			<artifactId>jackson-module-jaxb-annotations</artifactId>
 			<version>2.7.4</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.1.37</version>
+		</dependency>
 		<!-- json-end -->
 
 		<!-- 私有jar 引入 -->
@@ -288,6 +294,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-social-facebook</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -459,6 +469,22 @@
 					<configuration>
 						<verbose>true</verbose>
 						<overwrite>true</overwrite>
+					</configuration>
+				</plugin>
+				<!-- 解决maven test命令时console出现中文乱码乱码 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.7.2</version>
+					<configuration>
+						<forkMode>once</forkMode>
+	 					<argLine>-Dfile.encoding=UTF-8</argLine> 
+	<!-- 					<systemProperties> -->
+	<!-- 						<property> -->
+	<!-- 							<name>net.sourceforge.cobertura.datafile</name> -->
+	<!-- 							<value>target/cobertura/cobertura.ser</value> -->
+	<!-- 						</property> -->
+	<!-- 					</systemProperties> -->
 					</configuration>
 				</plugin>
 				<!-- java 编译插件 -->
