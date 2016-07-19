@@ -17,13 +17,17 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 public class LoginControllerTest extends BaseControllerTest {
 
     @Test
-    public void getDriefingDatas() throws Exception {
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.post("/checkLogin");
-		ResultActions result = this.mockMvc.perform(request);
-        result.andExpect(MockMvcResultMatchers.status().isOk());
-		MvcResult andReturn = result.andReturn();
-		andReturn.getModelAndView();
-        logger.info("return datas:" + andReturn.getResponse().getContentAsString());
+    public void controllerTest() {
+        try {
+            MockHttpServletRequestBuilder request = MockMvcRequestBuilders.post("/checkLogin");
+            ResultActions result = this.mockMvc.perform(request);
+            result.andExpect(MockMvcResultMatchers.status().isOk());
+            MvcResult andReturn = result.andReturn();
+            andReturn.getModelAndView();
+            logger.info("return datas:" + andReturn.getResponse().getContentAsString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 	}
 
 }
