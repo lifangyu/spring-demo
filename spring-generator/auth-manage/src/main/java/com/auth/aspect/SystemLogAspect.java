@@ -1,8 +1,8 @@
-/**  
- * @(#)SystemLogAspect.java	  2016年7月9日 下午6:17:34
- *
+/**
+ * @(#)SystemLogAspect.java 2016年7月9日 下午6:17:34
+ * <p>
  * Copyright 2016 Lify, Inc. All rights reserved.
- * Lify PROPRIETARY/CONFIDENTIAL. Use is subject to license terms. 
+ * Lify PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 package com.auth.aspect;
 
@@ -28,6 +28,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * 系统日志的切面类
+ *
  * @author lifangyu
  * @version V1.0
  */
@@ -76,7 +77,7 @@ public class SystemLogAspect {
      */
     @AfterThrowing(value = "SystemLogAspect.logPointcut() && @annotation(systemLogAnnotation)", throwing = "exception")
     public void invokeTargetException(JoinPoint joinPoint, SystemLogAnnotation systemLogAnnotation,
-            Exception exception) {
+                                      Exception exception) {
         try {
             this.handleSystemLog(joinPoint, systemLogAnnotation, exception);
         } catch (Exception e) {
@@ -90,12 +91,11 @@ public class SystemLogAspect {
      * 可以输出到系统系统/数据库/日志文件
      * </p>
      *
-     * @author lifangyu
      * @param joinPoint
      * @param systemLogAnnotation
-     * @param returnValue
-     *            void
-     * @throws JsonProcessingException 
+     * @param returnValue         void
+     * @throws JsonProcessingException
+     * @author lifangyu
      */
     private void handleSystemLog(JoinPoint joinPoint, SystemLogAnnotation systemLogAnnotation, Object object)
             throws JsonProcessingException {
@@ -129,10 +129,11 @@ public class SystemLogAspect {
             jsonParams = new ObjectMapper().writeValueAsString(params);
         } else {
             if (params != null) {
-                for (Object param : params) {
-                    jsonParams += jsonParams.equals("") ? "[" + (param==null?"null":param.toString()) : "|" + (param==null?"null": param.toString());
+                StringBuffer paraStr = new StringBuffer();
+                for (int i = 0; i < params.length; i++) {
+                    paraStr.append(ReflectionToStringBuilder.toString(params[i], ToStringStyle.SHORT_PREFIX_STYLE) + ";");
                 }
-                jsonParams += "]";
+                jsonParams = paraStr.toString();
             }
         }
 
@@ -142,11 +143,7 @@ public class SystemLogAspect {
             returnJson = getStackTrace((Exception) object);
         } else {
             if (systemLogAnnotation.SerialReturnValue()) {
-                if (returnValue instanceof List<?>) {
-                    returnJson = new ObjectMapper().writeValueAsString(returnValue);
-                } else {
-                    returnJson = new ObjectMapper().writeValueAsString(returnValue);
-                }
+                returnJson = new ObjectMapper().writeValueAsString(returnValue);
             } else {
                 returnJson = returnValue != null ? returnValue.toString() : "null";
             }
@@ -157,10 +154,10 @@ public class SystemLogAspect {
 
     /**
      * 获取异常的堆栈信息
-     * 
-     * @author xiaobowen
+     *
      * @param throwable
      * @return
+     * @author xiaobowen
      */
     private static String getStackTrace(Throwable throwable) {
         StringBuilder sb = new StringBuilder();
