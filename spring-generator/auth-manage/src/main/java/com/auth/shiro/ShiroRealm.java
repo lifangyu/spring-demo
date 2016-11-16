@@ -14,7 +14,6 @@ import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.DisabledAccountException;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.authz.UnauthorizedException;
@@ -33,8 +32,7 @@ import com.auth.controller.service.impl.UserServiceImpl;
 import com.auth.enums.SystemLogTypeEnum;
 import com.auth.model.AuthUser;
 import com.auth.utils.SpringContextUtil;
-import com.spring.common.utils.arithmetic.Digests;
-import com.spring.common.utils.arithmetic.DigestsEncodes;
+import com.spring.common.utils.arithmetic.MD5;
 
 /**
  * shiro 认证
@@ -45,12 +43,6 @@ import com.spring.common.utils.arithmetic.DigestsEncodes;
 public class ShiroRealm extends AuthorizingRealm {
 
     private static Logger logger = LoggerFactory.getLogger(ShiroRealm.class);
-
-    private static final int INTERATIONS = 1024;
-
-    private static final int SALT_SIZE = 8;
-
-    private static final String ALGORITHM = "SHA-1";
 
     /*
      * 不能使用注解，原因：在创建队形的时候spring还没有实例化service,导致NullException;
@@ -64,9 +56,6 @@ public class ShiroRealm extends AuthorizingRealm {
     public ShiroRealm() {
         super();
         // logger.info("ShiroRealm init start...");
-        HashedCredentialsMatcher matcher = new HashedCredentialsMatcher(ALGORITHM);
-        matcher.setHashIterations(INTERATIONS);
-        setCredentialsMatcher(matcher);
     }
 
     /**
@@ -115,28 +104,16 @@ public class ShiroRealm extends AuthorizingRealm {
             if (user.getStatus() == 0) {// 无效用户
                 throw new DisabledAccountException();
             }
-            byte[] salt = DigestsEncodes.decodeHex(user.getSalt());
+            byte[] salt = MD5.decodeHex(user.getSalt());
+
             ShiroUser shiroUser = new ShiroUser(user.getId(), user.getUserName(), user);
+
             return new SimpleAuthenticationInfo(shiroUser, user.getPassword(), ByteSource.Util.bytes(salt), getName());
         } else {
             throw new AuthenticationException("userName:" + username + ";password:" + password + "不存在对应的用戶");
         }
     }
 
-    public static class HashPassword {
-        public String salt;
-        public String password;
-    }
-
-    public HashPassword encrypt(String plainText) {
-        HashPassword result = new HashPassword();
-        byte[] salt = Digests.generateSalt(SALT_SIZE);
-        result.salt = DigestsEncodes.encodeHex(salt);
-
-        byte[] hashPassword = Digests.sha1(plainText.getBytes(), salt, INTERATIONS);
-        result.password = DigestsEncodes.encodeHex(hashPassword);
-        return result;
-    }
 
     /**
      * 更新用户授权信息缓存.
