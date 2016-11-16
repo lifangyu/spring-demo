@@ -82,6 +82,23 @@
     <repositories>
     	<!-- 私服创库的配置[下载jar包] -->
         <repository>
+            <id>nexus</id>
+            <name>nexus</name>
+            <url>http://115.159.199.94:8081/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </snapshots>
+        </repository>
+
+        <repository>
             <id>maven_online</id>
             <name>Maven of online</name>
             <url>   http://maven.alfresco.com/nexus/content/groups/public </url>
