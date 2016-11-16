@@ -28,6 +28,7 @@ import com.auth.enums.SystemLogTypeEnum;
 import com.auth.model.AuthUser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.spring.common.utils.arithmetic.MD5;
 import com.spring.common.utils.entity.ZTreeNode;
 import com.spring.common.utils.image.ImageUtils;
 
@@ -53,6 +54,7 @@ public class LoginController {
 	 * @throws IOException 
 	 */
     @RequestMapping(value = "createImage", method = RequestMethod.GET)
+    @SystemLogAnnotation(message = "获取验证码", systemLogTypeEnum = SystemLogTypeEnum.LOGIN, SerialParam = false, SerialReturnValue = false)
     public void createImage(HttpServletResponse response, HttpSession session) throws IOException {
 		//生成验证码及图片
 		Map<String, BufferedImage> map = ImageUtils.createImage();
@@ -87,7 +89,8 @@ public class LoginController {
             // 用户名不存在
             return 1;
         }
-        if (user.getPassword().equals(password)) {
+        String pass = MD5.encodeByMd5AndAutoSalt(password != null ? password.trim() : "", user.getSalt());
+        if (user.getPassword().equals(pass)) {
             // 用户密码错误
             return 2;
         }
@@ -146,6 +149,10 @@ public class LoginController {
         nodeList = menuService.getMenuNodeList(userId);
         // 排序，因为从set里取出来的值是无序的
         Collections.sort(nodeList, comparator);
+        
+        // jre 8 环境下【 先使用 sort 排序，如果相同在使用 id排序】写法
+        // Collections.sort(nodeList, Comparator.comparing(ZTreeNode::getSort).thenComparing(ZTreeNode::getId));
+        
         try {
             return new ObjectMapper().writeValueAsString(nodeList);
         } catch (JsonProcessingException e) {

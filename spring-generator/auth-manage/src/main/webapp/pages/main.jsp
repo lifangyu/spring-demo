@@ -44,7 +44,7 @@
                 <h1 style="font-size:24px;">&nbsp;</h1>
                 <h1 style="font-size:24px;">&nbsp;</h1>
 				<h1 style="font-size:24px;">* Edit By lify</h1>
-                <h1 style="font-size:24px;">* jQuery.EasyUI- 1.4.4 + zTree3.5.19 完美结合 应用实例 </h1>
+                <h1 style="font-size:24px;">* jQuery.EasyUI- 1.4.4 + zTree3.5.19 + spring boot + spring MVC + shiro + mybatis 完美结合 应用实例 </h1>
                 <h1 style="font-size:24px;">* </h1>
 				<h1 style="font-size:24px;">* 2016-06-06</h1>
 				<h1 style="font-size:24px;">&nbsp;</h1>

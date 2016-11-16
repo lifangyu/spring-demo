@@ -1,11 +1,16 @@
 package com.auth.controller;
 
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
 
 /**
  * 
@@ -13,6 +18,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
  * @author lifangyu
  * @version V1.0
  */
+
 // @Ignore
 public class LoginControllerTest extends BaseControllerTest {
 
