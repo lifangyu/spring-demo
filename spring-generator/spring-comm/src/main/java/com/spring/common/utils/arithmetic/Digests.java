@@ -6,7 +6,6 @@
  */
 package com.spring.common.utils.arithmetic;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -138,9 +137,29 @@ public class Digests {
         return result;
     }
 
+    /**
+     *  自定义盐 生成密码（与HashPassword encrypt(String password) 方法生成相同的密码）
+     * @author lifangyu
+     * @param password
+     * @param salt
+     * @return
+     * 		HashPassword
+     */
+    public static HashPassword encrypt(String password,String salt) {
+        HashPassword result = new HashPassword();
+        result.salt = salt;
+        byte[] hashPassword = Digests.sha1(password.getBytes(), salt.getBytes(), INTERATIONS);
+
+        result.password = DigestsEncodes.encodeHex(hashPassword);
+        return result;
+    }
+
+
     public static void main(String[] args) throws UnsupportedEncodingException, IOException {
-        HashPassword passSHA1 = Digests.encrypt("lfy2016YF");
-        System.out.println(passSHA1.salt + ";" + passSHA1.password);
-        System.out.println(Digests.md5(new ByteArrayInputStream("lfy2016YF".getBytes("UTF-8"))));
+        HashPassword h1 = Digests.encrypt("lfy2016YF");
+        System.out.println(h1.salt + ";" + h1.password);
+        // 生成的密码不可破解，无法重复
+        HashPassword h2 = Digests.encrypt("lfy2016YF", h1.salt);
+        System.out.println(h2.salt + ";" + h2.password);
     }
 }
