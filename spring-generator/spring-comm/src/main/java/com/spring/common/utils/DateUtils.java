@@ -63,7 +63,7 @@ public class DateUtils {
 	/**
 	 * 方法说明：
 	 * 
-	 * @param begin
+	 * @param date
 	 * @param k
 	 * @return
 	 */
@@ -236,7 +236,7 @@ public class DateUtils {
 	 * 
 	 * 方法说明：2个时间进行比较，并把比较结果转成小时/分钟/秒
 	 * 
-	 * @param date
+	 * @param start
 	 * @return
 	 */
 	public static Long[] sec2Hour(long start, long end) {
@@ -301,7 +301,6 @@ public class DateUtils {
 	 * 方法说明：格式化日期
 	 * 
 	 * @param date
-	 * @param pattern
 	 * @return
 	 */
 	public static String format(Date date) {
@@ -380,8 +379,7 @@ public class DateUtils {
 	 * 
 	 * 方法说明：判断时间date是否大于今天 true 大于等于今天 false 小于今天
 	 * 
-	 * @param today
-	 * @param publicTime
+	 * @param date
 	 * @return
 	 */
 	public static boolean greaterOrEqualThanToday(Date date) {
@@ -564,10 +562,6 @@ public class DateUtils {
 		return cal.getTime();
 	}
 	
-	public static void main(String[] args) {
-		System.out.println(addCertainDays(parse("2016-05-10 11:48:00","yyyy-MM-dd HH:mm:ss"),-1));
-	}
-
 	/**
 	 * @param date1
 	 *            需要比较的时间 不能为空(null),需要正确的日期格式
@@ -811,5 +805,78 @@ public class DateUtils {
 	public static Integer getSecond() {
 		Calendar c = Calendar.getInstance();// 可以对每个时间域单独修改
 		return c.get(Calendar.SECOND);
+	}
+
+
+	/**
+	 * 获取某年的第几周的开始日期
+	 * @param year
+	 * @param week
+	 * @return
+	 */
+	public static Date getFirstDayOfWeek(int year, int week) {
+		Calendar c = new GregorianCalendar();
+		c.set(Calendar.YEAR, year);
+		c.set(Calendar.MONTH, Calendar.JANUARY);
+		c.set(Calendar.DATE, 1);
+
+		Calendar cal = (GregorianCalendar) c.clone();
+		cal.add(Calendar.DATE, week * 7);
+
+		return getFirstDayOfWeek(cal.getTime());
+	}
+
+	/**
+	 * 获取某年的第几周的结束日期
+	 * @param year
+	 * @param week
+	 * @return
+	 */
+	public static Date getLastDayOfWeek(int year, int week) {
+		Calendar c = new GregorianCalendar();
+		c.set(Calendar.YEAR, year);
+		c.set(Calendar.MONTH, Calendar.JANUARY);
+		c.set(Calendar.DATE, 1);
+
+		Calendar cal = (GregorianCalendar) c.clone();
+		cal.add(Calendar.DATE, week * 7);
+
+		return getLastDayOfWeek(cal.getTime());
+	}
+
+
+
+	/**
+	 * 获取当前时间所在周的开始日期
+	 * @param date
+	 * @return
+	 */
+	public static Date getFirstDayOfWeek(Date date) {
+		Calendar c = new GregorianCalendar();
+		c.setFirstDayOfWeek(Calendar.MONDAY);
+		c.setTime(date);
+		c.set(Calendar.DAY_OF_WEEK, c.getFirstDayOfWeek()); // Monday
+		return c.getTime();
+	}
+
+	/**
+	 * 获取当前时间所在周的结束日期
+	 * @param date
+	 * @return
+	 */
+	public static Date getLastDayOfWeek(Date date) {
+		Calendar c = new GregorianCalendar();
+		c.setFirstDayOfWeek(Calendar.MONDAY);
+		c.setTime(date);
+		c.set(Calendar.DAY_OF_WEEK, c.getFirstDayOfWeek() + 6); // Sunday
+		return c.getTime();
+	}
+
+
+
+	public static void main(String[] args) {
+		System.out.println(addCertainDays(parse("2016-05-10 11:48:00","yyyy-MM-dd HH:mm:ss"),-1));
+		System.out.println(format(getFirstDayOfWeek(2017,0)));
+		System.out.println(format(getLastDayOfWeek(2017,0)));
 	}
 }
